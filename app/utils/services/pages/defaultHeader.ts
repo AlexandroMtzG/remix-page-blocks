@@ -17,7 +17,7 @@ export function defaultHeader({ t }: { t: TFunction }): HeaderBlockDto {
         items: [
           { title: "SaasRock", path: "https://saasrock.com/?ref=remix-page-blocks-header", target: "_blank" },
           { title: "RemixBlocks (open source)", path: "https://remixblocks.com/?ref=remix-page-blocks", target: "_blank" },
-          { title: "SaasFrontends (open source)", path: "https://https://saasfrontends.com/?ref=remix-page-blocks", target: "_blank" },
+          { title: "SaasFrontends (open source)", path: "https://saasfrontends.com/?ref=remix-page-blocks", target: "_blank" },
         ],
       },
     ],
