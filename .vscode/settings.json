@@ -1,0 +1,24 @@
+{
+  "i18n-ally.localesPaths": ["public/locales"],
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.defaultNamespace": "",
+  "i18n-ally.namespace": false,
+  "i18n-ally.extract.ignored": ["*"],
+  "i18n-ally.keysInUse": [
+    "pricing.recommended",
+    "pricing.products.*",
+    "pricing.features.*",
+    "shared.locales.*",
+    "settings.profile.status.*",
+    "settings.profile.type.*",
+    "app.shared.periods.*",
+    "app.shared.periodicity.*",
+    "app.shared.months.*",
+    "app.shared.bimonthly.*",
+    "app.shared.quarterly.*",
+    "app.shared.yearly.*",
+    "app.shared.colors.*",
+    "api.errors.*"
+  ]
+}

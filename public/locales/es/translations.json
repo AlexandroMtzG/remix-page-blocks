@@ -1,0 +1,147 @@
+{
+  "shared": {
+    "add": "Agregar",
+    "remove": "Eliminar",
+    "searchDot": "Buscar...",
+    "loading": "Cargando",
+    "processing": "Procesando",
+    "close": "Cerrar",
+    "success": "Éxito",
+    "error": "Error",
+    "readDocs": "Ver documentación",
+    "learnMore": "Ver más",
+    "signIn": "Iniciar",
+    "signUp": "Registrarse",
+    "locales": {
+      "en": "Inglés",
+      "es": "Español"
+    }
+  },
+  "blocks": {
+    "header": {
+      "product": "Producto",
+      "contact": "Contacto",
+      "newsletter": "Newsletter",
+      "more": "Más"
+    },
+    "footer": {
+      "text": "Una colección de bloques funcionales: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, y más.",
+      "application": {
+        "title": "Aplicación",
+        "home": "Inicio",
+        "contact": "Contacto",
+        "newsletter": "Newsletter"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Política de privacidad",
+        "terms": "Términos y condiciones"
+      }
+    },
+    "banner": {
+      "text": "¡Bienvenido a Bloques de Páginas Remix 👋! Desarrollado por SaasRock.",
+      "cta": {
+        "learnMore": "Ver más"
+      }
+    },
+    "hero": {
+      "headline": "Bloques de Páginas Remix",
+      "subheadline": "Una colección de bloques funcionales: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, y más.",
+      "topText": "Remix v1.6.3 - Tailwind CSS v3.1.2",
+      "cta": {
+        "primary": "Ver en Github",
+        "secondary": "Hecho por SaasRock"
+      },
+      "bottomText": "Conoce mis otros proyectos open source"
+    },
+    "logoClouds": {
+      "headline": "Stack de primer nivel"
+    },
+    "gallery": {
+      "headline": "Sección de Galería",
+      "subheadline": "Páginas de Landing, Contact y Newsletter con selector de Lenguage y Tema.",
+      "topText": "Una buena plantilla para comenzar"
+    },
+    "video": {
+      "headline": "Sección de Video",
+      "subheadline": "Mira el video de por qué construí Remix Page Blocks 👇"
+    },
+    "features1": {
+      "headline": "Plantilla de Remix de Calidad",
+      "subheadline": "Remix Page Blocks está hecho con algunas páginas de marketing de SaasRock.",
+      "topText": "DRY - Don't repeat yourself",
+      "items": {
+        "editor": {
+          "name": "Editor de Bloques",
+          "description": "Editor fácil de usar para algunos componentes: Hero, Header, Footer..."
+        },
+        "landing": {
+          "name": "Página Landing",
+          "description": "Página de inicio con sección Hero, logos, galería, video, y más."
+        },
+        "contact": {
+          "name": "Página de Contacto",
+          "description": "Una página de contacto para permitir formularios (usa formspree.io)."
+        },
+        "newsletter": {
+          "name": "Página de Newsletter",
+          "description": "Una página de newsletter para recibir suscriptores de correo (usa convertkit.com)."
+        },
+        "dark-mode": {
+          "name": "Dark Mode",
+          "description": "Modo oscuro para la interfaz de usuario y páginas."
+        },
+        "multi-language": {
+          "name": "Multi-lenguaje",
+          "description": "Soporte para múltiples idiomas (inglés y español)."
+        },
+        "multi-theme": {
+          "name": "Multi-tema",
+          "description": "Soporte para múltiples colores, solo modifica tailwind.config.js."
+        }
+      }
+    },
+    "features2": {
+      "topText": "Hecho con las mejores herramientas",
+      "headline": "Stack de primer nivel",
+      "subheadline": "Esta plantilla utiliza lo mejor en web dev: SSR, utility-first CSS, y TypeScript."
+    },
+    "newsletter": {
+      "headline": "Mantente al día",
+      "subheadline": "Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones."
+    }
+  },
+  "contact": {
+    "headline": "Contáctanos",
+    "subheadline": "Nos encantaría saber cómo podemos agregar valor a tu empresa.",
+    "send": "Enviar",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo",
+      "organization": "Organización",
+      "jobTitle": "Rol",
+      "message": "Mensaje"
+    }
+  },
+  "newsletter": {
+    "headline": "Suscríbete a nuestro boletín",
+    "subheadline": "Suscríbete al newsletter para recibir actualizaciones",
+    "subscribe": "Suscribirse",
+    "subscribing": "Suscribiendo",
+    "subscribed": "Gracias por suscribirte",
+    "weCare": "Nos importa la protección de tu privacidad.",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo"
+    }
+  },
+  "privacy": {
+    "headline": "Política de privacidad"
+  },
+  "terms": {
+    "headline": "Términos y condiciones"
+  },
+  "copyright": "RemixBlocks, 2022 © Todos los derechos reservados"
+}

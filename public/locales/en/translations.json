@@ -1,0 +1,147 @@
+{
+  "shared": {
+    "add": "Add",
+    "remove": "Remove",
+    "searchDot": "Search...",
+    "loading": "Loading",
+    "processing": "Processing",
+    "close": "Close",
+    "success": "Success",
+    "error": "Error",
+    "readDocs": "Read the docs",
+    "learnMore": "Learn more",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "locales": {
+      "en": "English",
+      "es": "Spanish"
+    }
+  },
+  "blocks": {
+    "header": {
+      "product": "Product",
+      "contact": "Contact",
+      "newsletter": "Newsletter",
+      "more": "More"
+    },
+    "footer": {
+      "text": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
+      "application": {
+        "title": "Application",
+        "home": "Home",
+        "contact": "Contact",
+        "newsletter": "Newsletter"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy policy",
+        "terms": "Terms of use"
+      }
+    },
+    "banner": {
+      "text": "Welcome to Remix Page Blocks 👋! Built by SaasRock.",
+      "cta": {
+        "learnMore": "Learn more"
+      }
+    },
+    "hero": {
+      "headline": "Remix Page Blocks",
+      "subheadline": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
+      "topText": "Remix v1.6.3 - Tailwind CSS v3.1.2",
+      "cta": {
+        "primary": "View on Github",
+        "secondary": "Built by SaasRock"
+      },
+      "bottomText": "Check out my other open source projects"
+    },
+    "logoClouds": {
+      "headline": "First-class tech stack"
+    },
+    "gallery": {
+      "headline": "Gallery Section",
+      "subheadline": "Landing, Contact and Newsletter pages with Locale and Theme switchers.",
+      "topText": "A great starting point"
+    },
+    "video": {
+      "headline": "Video Section",
+      "subheadline": "Check out why I built Remix Page Blocks 👇"
+    },
+    "features1": {
+      "headline": "Quality Remix Boilerplate",
+      "subheadline": "Remix Page Blocks is built with some SaasRock front pages.",
+      "topText": "DRY - Don't repeat yourself",
+      "items": {
+        "editor": {
+          "name": "Block Editor",
+          "description": "Easy-to-use UI blocks editor for some components: Hero, Header, Footer..."
+        },
+        "landing": {
+          "name": "Landing Page",
+          "description": "A landing page with a hero section, logo clouds, gallery, video, and more."
+        },
+        "contact": {
+          "name": "Contact Page",
+          "description": "A contact page with a form for submissions (uses formspree.io)."
+        },
+        "newsletter": {
+          "name": "Newsletter Page",
+          "description": "A newsletter page to get subscribers (uses convertkit.com)."
+        },
+        "dark-mode": {
+          "name": "Dark Mode",
+          "description": "Support for light and dark mode with a switcher."
+        },
+        "multi-language": {
+          "name": "Multi-language",
+          "description": "Support for multiple languages: English and Spanish."
+        },
+        "multi-theme": {
+          "name": "Multi-theme",
+          "description": "Support for multiple themes, just modify tailwind.config.js."
+        }
+      }
+    },
+    "features2": {
+      "topText": "Powered by the best tools",
+      "headline": "First-class tech stack",
+      "subheadline": "The codebase comes with the latest technology out there: SSR, utility-first CSS, and TypeScript."
+    },
+    "newsletter": {
+      "headline": "Stay up to date",
+      "subheadline": "Subscribe to the newsletter to get product updates"
+    }
+  },
+  "contact": {
+    "headline": "Contact us",
+    "subheadline": "We'd love to know how we can add value to your company",
+    "send": "Send",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "organization": "Organization",
+      "jobTitle": "Job Title",
+      "message": "Message"
+    }
+  },
+  "newsletter": {
+    "headline": "Stay up to date",
+    "subheadline": "Subscribe to the newsletter to get product updates",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing",
+    "subscribed": "Subscribed",
+    "weCare": "We care about the protection of your data.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email"
+    }
+  },
+  "privacy": {
+    "headline": "Privacy Policy"
+  },
+  "terms": {
+    "headline": "Terms and Conditions"
+  },
+  "copyright": "RemixBlocks, 2022 © All rights reserved."
+}
