@@ -171,21 +171,23 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
         })}
 
         {editMode && <AddBlockButton className={clsx(items.length === 0 && "py-8")} onAdd={(type) => addBlock(type)} />}
-        <SlideOverWideEmpty
-          className="relative z-10"
-          title={PageBlockUtils.getTypeTitle(editinBlockType)}
-          open={slideOverOpen}
-          onClose={onClose}
-          buttons={
-            <>
-              <ButtonSecondary onClick={onClose}>{t("shared.close")}</ButtonSecondary>
-            </>
-          }
-        >
-          <div>
-            <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} onClose={() => setSlideOverOpen(false)} />
-          </div>
-        </SlideOverWideEmpty>
+        {editinBlockType && editingBlock && (
+          <SlideOverWideEmpty
+            className="relative z-10"
+            title={PageBlockUtils.getTypeTitle(editinBlockType)}
+            open={slideOverOpen}
+            onClose={onClose}
+            buttons={
+              <>
+                <ButtonSecondary onClick={onClose}>{t("shared.close")}</ButtonSecondary>
+              </>
+            }
+          >
+            <div>
+              <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} onClose={() => setSlideOverOpen(false)} />
+            </div>
+          </SlideOverWideEmpty>
+        )}
       </div>
     </Fragment>
   );
