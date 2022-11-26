@@ -7,8 +7,8 @@ import { Language } from "remix-i18next";
 import Footer from "~/components/front/Footer";
 import Header from "~/components/front/Header";
 import { i18nHelper } from "~/locale/i18n.utils";
-import OpenSuccessModal from "~/components/ui/modals/OpenSuccessModal";
-import OpenErrorModal from "~/components/ui/modals/OpenErrorModal";
+import OpenSuccessModal from "~/components/ui/OpenSuccessModal";
+import OpenErrorModal from "~/components/ui/OpenErrorModal";
 
 type LoaderData = {
   title: string;

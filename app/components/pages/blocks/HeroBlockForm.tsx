@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HeroBlockDto, HeroBlockStyle } from "~/application/dtos/marketing/HeroBlockDto";
-import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import XIcon from "~/components/ui/icons/XIcon";
-import InputCheckbox from "~/components/ui/input/InputCheckbox";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
+import InputGroup from "~/components/ui/InputGroup";
+import XIcon from "~/components/icons/XIcon";
+import InputCheckbox from "~/components/ui/InputCheckbox";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 
 export default function HeroBlockForm({ item, onUpdate }: { item?: HeroBlockDto; onUpdate: (item: HeroBlockDto) => void }) {

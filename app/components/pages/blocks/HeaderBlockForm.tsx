@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HeaderBlockDto, HeaderBlockStyle } from "~/application/dtos/marketing/HeaderBlockDto";
 import { NavbarItemDto } from "~/application/dtos/marketing/NavbarItemDto";
-import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import InputCheckboxWithDescription from "~/components/ui/input/InputCheckboxWithDescription";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
-import CollapsibleRow from "~/components/ui/tables/CollapsibleRow";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
+import InputGroup from "~/components/ui/InputGroup";
+import InputCheckboxWithDescription from "~/components/ui/InputCheckboxWithDescription";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
+import CollapsibleRow from "~/components/ui/CollapsibleRow";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 
 export default function HeaderBlockForm({ item, onUpdate }: { item?: HeaderBlockDto; onUpdate: (item: HeaderBlockDto) => void }) {

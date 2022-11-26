@@ -4,7 +4,7 @@ import _supportedLocales from "~/locale/supportedLocales";
 import clsx from "clsx";
 import { useLocation, useSearchParams, useSubmit } from "@remix-run/react";
 import { useRootData } from "~/utils/data/useRootData";
-import Dropdown from "../ui/dropdowns/Dropdown";
+import Dropdown from "../ui/Dropdown";
 
 interface Props {
   className?: string;

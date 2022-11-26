@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { NewsletterBlockDto, NewsletterBlockStyle } from "~/application/dtos/marketing/NewsletterBlockDto";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
+import InputGroup from "~/components/ui/InputGroup";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 import SocialsBlockForm from "./SocialsBlockForm";
 

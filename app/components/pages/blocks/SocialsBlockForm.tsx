@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SocialsDto } from "~/application/dtos/marketing/SocialsDto";
-import InputText from "~/components/ui/input/InputText";
+import InputText from "~/components/ui/InputText";
 
 export default function SocialsBlockForm({ item, onUpdate }: { item?: SocialsDto; onUpdate: (item: SocialsDto) => void }) {
   const [instagram, setInstagram] = useState(item?.instagram);

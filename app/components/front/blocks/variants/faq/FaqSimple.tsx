@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { FaqBlockDto } from "~/application/dtos/marketing/FaqBlockDto";
-import ChevronDownIcon from "~/components/ui/icons/ChevronDownIcon";
+import ChevronDownIcon from "~/components/icons/ChevronDownIcon";
 
 export default function FaqSimple({ item }: { item: FaqBlockDto }) {
   const { t } = useTranslation();

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BannerBlockDto, BannerBlockStyle } from "~/application/dtos/marketing/BannerBlockDto";
-import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import XIcon from "~/components/ui/icons/XIcon";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
+import InputGroup from "~/components/ui/InputGroup";
+import XIcon from "~/components/icons/XIcon";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 
 export default function BannerBlockForm({ item, onUpdate }: { item?: BannerBlockDto; onUpdate: (item: BannerBlockDto) => void }) {
