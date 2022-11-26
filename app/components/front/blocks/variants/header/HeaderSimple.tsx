@@ -79,17 +79,34 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
                   return (
                     <Fragment key={idx}>
                       {!link.items || link.items.length === 0 ? (
-                        <Link
-                          to={link.path ?? ""}
-                          className={clsx(
-                            link.className,
-                            "rounded-sm px-3 py-1 text-base font-medium leading-6 transition duration-150 ease-in-out focus:outline-none",
-                            !isCurrent(link.path ?? "") && "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300",
-                            isCurrent(link.path ?? "") && "text-gray-900 dark:text-white"
+                        <Fragment>
+                          {link.path?.startsWith("http") ? (
+                            <a
+                              href={link.path ?? ""}
+                              target={link.target}
+                              className={clsx(
+                                link.className,
+                                "rounded-sm px-3 py-1 text-base font-medium leading-6 transition duration-150 ease-in-out focus:outline-none",
+                                !isCurrent(link.path ?? "") && "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300",
+                                isCurrent(link.path ?? "") && "text-gray-900 dark:text-white"
+                              )}
+                            >
+                              {t(link.title)}
+                            </a>
+                          ) : (
+                            <Link
+                              to={link.path ?? ""}
+                              className={clsx(
+                                link.className,
+                                "rounded-sm px-3 py-1 text-base font-medium leading-6 transition duration-150 ease-in-out focus:outline-none",
+                                !isCurrent(link.path ?? "") && "text-gray-500 hover:text-gray-700 dark:hover:text-gray-300",
+                                isCurrent(link.path ?? "") && "text-gray-900 dark:text-white"
+                              )}
+                            >
+                              {t(link.title)}
+                            </Link>
                           )}
-                        >
-                          {t(link.title)}
-                        </Link>
+                        </Fragment>
                       ) : (
                         <HeaderFlyoutItem
                           className="rounded-sm px-3 py-1 text-base font-medium leading-6 transition duration-150 ease-in-out focus:outline-none"

@@ -2,16 +2,19 @@ import { useSearchParams } from "@remix-run/react";
 import { useState } from "react";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
 import ButtonSecondary from "~/components/ui/buttons/ButtonSecondary";
+import Modal from "~/components/ui/modals/Modal";
 import OpenErrorModal from "~/components/ui/modals/OpenErrorModal";
 import OpenSuccessModal from "~/components/ui/modals/OpenSuccessModal";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
+import TemplateEditor from "./TemplateEditor";
 
 type MessageDto = {
   success?: { title: string; message: string };
   error?: { title: string; message: string };
 };
-export default function PageBlockEditMode({ items }: { items: PageBlockDto[] }) {
+export default function PageBlockEditMode({ items, onSetBlocks }: { items: PageBlockDto[]; onSetBlocks: (items: PageBlockDto[]) => void }) {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [settingTemplate, setSettingTemplate] = useState(false);
   const [message, setMessage] = useState<MessageDto>();
 
   function isEditMode() {
@@ -48,6 +51,15 @@ export default function PageBlockEditMode({ items }: { items: PageBlockDto[] }) 
     });
   }
 
+  function onSetTemplate() {
+    setSettingTemplate(true);
+  }
+
+  function onSelectedBlocks(items: PageBlockDto[]) {
+    setSettingTemplate(false);
+    onSetBlocks(items);
+  }
+
   return (
     <div>
       {isEditMode() && (
@@ -55,6 +67,7 @@ export default function PageBlockEditMode({ items }: { items: PageBlockDto[] }) 
           <div className="flex justify-center space-x-4">
             <ButtonSecondary onClick={toggleEditMode}>Exit Edit Mode</ButtonSecondary>
             <ButtonSecondary onClick={onDownload}>Download Blocks</ButtonSecondary>
+            <ButtonSecondary onClick={onSetTemplate}>Change template</ButtonSecondary>
           </div>
         </div>
       )}
@@ -67,6 +80,12 @@ export default function PageBlockEditMode({ items }: { items: PageBlockDto[] }) 
       />
 
       <OpenErrorModal title={message?.error?.title} description={message?.error?.message} open={!!message?.error} onClose={() => setMessage(undefined)} />
+
+      <Modal open={settingTemplate} setOpen={setSettingTemplate}>
+        <div>
+          <TemplateEditor items={items} onSelected={onSelectedBlocks} />
+        </div>
+      </Modal>
     </div>
   );
 }

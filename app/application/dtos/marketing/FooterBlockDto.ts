@@ -9,7 +9,7 @@ export interface FooterBlockDto {
 
 export interface FooterSectionDto {
   name: string;
-  items: { name: string; href: string }[];
+  items: { name: string; href: string; target?: string }[];
 }
 
 export enum FooterBlockStyle {

@@ -30,7 +30,7 @@ export default function FooterColumns({ item }: { item: FooterBlockDto }) {
                     {section.items.map((item) => (
                       <li key={item.name}>
                         {item.href.startsWith("http") ? (
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank" rel="noreferrer">
+                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white" target={item.target}>
                             {t(item.name)}
                           </a>
                         ) : (

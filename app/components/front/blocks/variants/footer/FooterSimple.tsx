@@ -16,7 +16,7 @@ export default function FooterSimple({ item }: { item: FooterBlockDto }) {
                   return (
                     <div key={link.href} className="px-5 py-2">
                       {link.href.startsWith("http") ? (
-                        <a href={link.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank" rel="noreferrer">
+                        <a href={link.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white" target={link.target}>
                           {t(link.name)}
                         </a>
                       ) : (
