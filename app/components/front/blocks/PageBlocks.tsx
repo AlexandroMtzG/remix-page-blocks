@@ -182,9 +182,9 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
             </>
           }
         >
-          {editingBlock && (
+          <div>
             <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} onClose={() => setSlideOverOpen(false)} />
-          )}
+          </div>
         </SlideOverWideEmpty>
       </div>
     </Fragment>
