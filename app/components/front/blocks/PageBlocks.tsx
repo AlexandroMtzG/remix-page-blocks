@@ -99,6 +99,19 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
     setEditingBlockType("");
   }
 
+  function detectMob() {
+    try {
+      const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+
+      return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+      });
+    } catch (e) {
+      // ignore
+      return false;
+    }
+  }
+
   return (
     <Fragment>
       <div className={clsx("relative overflow-hidden bg-white text-gray-800 dark:bg-gray-900 dark:text-slate-200", editMode && "")}>
@@ -171,7 +184,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
         })}
 
         {editMode && <AddBlockButton className={clsx(items.length === 0 && "py-8")} onAdd={(type) => addBlock(type)} />}
-        {editinBlockType && editingBlock && (
+        {(!detectMob() || (editinBlockType && editingBlock)) && (
           <SlideOverWideEmpty
             className="relative z-10"
             title={PageBlockUtils.getTypeTitle(editinBlockType)}
