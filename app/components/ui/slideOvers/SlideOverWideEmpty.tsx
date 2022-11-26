@@ -1,7 +1,7 @@
 import { Fragment, ReactNode } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import XIcon from "../icons/XIcon";
 import clsx from "clsx";
+import XIcon from "../icons/XIcon";
 
 export default function SlideOverWideEmpty({
   title,
@@ -20,7 +20,7 @@ export default function SlideOverWideEmpty({
 }) {
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={onClose}>
+      <Dialog as="div" className="relative z-20" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -38,10 +38,10 @@ export default function SlideOverWideEmpty({
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full sm:pl-16">
               <Transition.Child
                 as={Fragment}
-                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enter="transform transition ease-in-out duration-500 sm:duration-300"
                 enterFrom="translate-x-full"
                 enterTo="translate-x-0"
-                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leave="transform transition ease-in-out duration-500 sm:duration-300"
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >

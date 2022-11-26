@@ -2,13 +2,13 @@ import { Fragment, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link, useLocation } from "@remix-run/react";
 import Logo from "~/components/front/Logo";
-import DarkModeToggle from "~/components/ui/toggles/DarkModeToggle";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { HeaderBlockDto } from "~/application/dtos/marketing/HeaderBlockDto";
 import HeaderFlyoutItem from "~/components/ui/headers/HeaderFlyoutItem";
 import Icon from "~/components/front/Icon";
-import LocaleSelector from "~/components/ui/selectors/LocaleSelector";
+import LocaleSelector from "~/components/toggles/LocaleSelector";
+import DarkModeToggle from "~/components/toggles/DarkModeToggle";
 
 export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
   const { t } = useTranslation();

@@ -30,7 +30,7 @@ export default function ButtonTertiary({ className = "", type = "button", onClic
                 disabled ? "cursor-not-allowed opacity-75" : "hover:border-dotted",
                 !destructive && "border-b text-theme-700 ",
                 destructive && "text-red-600",
-                !disabled && !destructive && "hover:text-theme-800 focus:text-theme-900 ",
+                !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
                 !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
               )}
             >
@@ -50,7 +50,7 @@ export default function ButtonTertiary({ className = "", type = "button", onClic
                     disabled ? "cursor-not-allowed opacity-75" : " hover:border-dotted",
                     !destructive && "border-b text-theme-700 ",
                     destructive && "text-red-600",
-                    !disabled && !destructive && "hover:text-theme-800 focus:text-theme-900 ",
+                    !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
                     !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
                   )}
                 >
@@ -67,7 +67,7 @@ export default function ButtonTertiary({ className = "", type = "button", onClic
                     disabled ? "cursor-not-allowed opacity-75" : " hover:border-dotted",
                     !destructive && "border-b text-theme-700 ",
                     destructive && "text-red-600",
-                    !disabled && !destructive && "hover:text-theme-800 focus:text-theme-900 ",
+                    !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
                     !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
                   )}
                 >

@@ -1,12 +1,10 @@
 import { KeyboardEvent, Ref, forwardRef, useImperativeHandle, useRef, ReactNode } from "react";
 import { Fragment, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { Link } from "@remix-run/react";
 import { Colors } from "~/application/enums/shared/Colors";
-import ColorBadge from "../badges/ColorBadge";
-import HintTooltip from "../tooltips/HintTooltip";
+import clsx from "clsx";
 
 export interface RefInputSelector {
   focus: () => void;
@@ -111,8 +109,6 @@ const InputSelector = (
                   {title}
                   {required && <span className="ml-1 text-red-500">*</span>}
                 </div>
-
-                {help && <HintTooltip text={help} />}
               </div>
               {hint}
             </Listbox.Label>
@@ -131,7 +127,6 @@ const InputSelector = (
               <input type="hidden" readOnly name={name} value={selected?.value ?? ""} />
 
               <span className="inline-flex w-full items-center space-x-2 truncate">
-                {withColors && selected && <ColorBadge color={selected?.color ?? Colors.UNDEFINED} />}
                 <div className="truncate">
                   {selected ? <span>{selected?.name}</span> : <span className="text-sm text-gray-500">{selectPlaceholder ?? t("shared.select")}...</span>}
                 </div>
@@ -214,7 +209,6 @@ const InputSelector = (
                     {({ selected, active }) => (
                       <>
                         <div className="flex items-center space-x-2">
-                          {item.color !== undefined && <ColorBadge color={item.color} />}
                           <div className={clsx(selected ? "font-semibold" : "font-normal", "truncate")}>{item.name}</div>
                         </div>
 

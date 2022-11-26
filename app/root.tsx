@@ -4,9 +4,9 @@ import styles from "./styles/app.css";
 import { useSetupTranslations } from "remix-i18next";
 import { createUserSession, getUserInfo } from "./utils/session.server";
 import { loadRootData, useRootData } from "./utils/data/useRootData";
-import FloatingLoader from "./components/ui/loaders/FloatingLoader";
 import clsx from "clsx";
 import Page404 from "./components/pages/Page404";
+import FloatingLoader from "./components/transitions/FloatingLoader";
 
 export let links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];

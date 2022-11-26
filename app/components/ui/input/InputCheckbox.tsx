@@ -1,7 +1,6 @@
 import { Switch } from "@headlessui/react";
 import clsx from "clsx";
 import { forwardRef, ReactNode, Ref, RefObject, useEffect, useImperativeHandle, useRef, useState } from "react";
-import HintTooltip from "~/components/ui/tooltips/HintTooltip";
 
 export interface RefInputCheckbox {
   input: RefObject<HTMLInputElement>;
@@ -47,7 +46,6 @@ const InputCheckbox = (
               {title}
               {required && <span className="ml-1 text-red-500">*</span>}
             </div>
-            <div className="">{help && <HintTooltip text={help} />}</div>
           </div>
           {hint}
         </label>

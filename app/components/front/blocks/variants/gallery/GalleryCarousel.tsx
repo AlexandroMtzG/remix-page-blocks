@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { GalleryBlockDto } from "~/application/dtos/marketing/GalleryBlockDto";
-import Carousel from "~/components/ui/images/Carousel";
+import Carousel from "./Carousel";
 
 export default function GalleryCarousel({ item }: { item: GalleryBlockDto }) {
   const { t } = useTranslation();

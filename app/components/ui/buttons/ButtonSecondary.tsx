@@ -29,7 +29,7 @@ export default function ButtonSecondary({ className = "", type = "button", onCli
                 disabled && "cursor-not-allowed opacity-75",
                 !destructive && "text-accent-700",
                 destructive && "text-red-700",
-                !disabled && !destructive && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
+                !disabled && !destructive && !className && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
                 !disabled && destructive && "hover:bg-red-50 focus:ring-red-500"
               )}
             >
@@ -47,7 +47,7 @@ export default function ButtonSecondary({ className = "", type = "button", onCli
                 disabled && "cursor-not-allowed opacity-75",
                 !destructive && "text-accent-700",
                 destructive && "text-red-700",
-                !disabled && !destructive && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
+                !disabled && !destructive && !className && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
                 !disabled && destructive && "hover:bg-red-50 focus:ring-red-500"
               )}
             >

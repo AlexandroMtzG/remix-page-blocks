@@ -43,11 +43,7 @@ export default function HeaderFlyoutItem({ title, items, className }: Props) {
                   {items?.map((item) => (
                     <Fragment key={t(item.title)}>
                       {item.path?.startsWith("https:") ? (
-                        <a
-                          href={item.path ?? "#"}
-                          target={item.target}
-                          className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-50"
-                        >
+                        <a href={item.path ?? "#"} className="-m-3 block rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-50">
                           <p className="text-base font-medium text-gray-900">{t(item.title)}</p>
                           {item.description && <p className="mt-1 text-sm text-gray-500">{t(item.description)}</p>}
                         </a>

@@ -26,7 +26,7 @@ export default function ServerError({ error }: { error: Error }) {
         </Link>
         {debug && error.stack && (
           <div className="pt-4">
-            <div className="border-t border-dashed border-gray-300 pt-3 text-left text-sm text-gray-600">{error.stack}</div>
+            <div className="break-words border-t border-dashed border-gray-300 pt-3 text-left text-sm text-gray-600">{error.stack}</div>
           </div>
         )}
       </div>

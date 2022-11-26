@@ -21,7 +21,7 @@ export default function ButtonPrimary({ className = "", type = "button", onClick
     disabled && "cursor-not-allowed opacity-75",
     !destructive && "bg-accent-800",
     destructive && "bg-red-600",
-    !disabled && !destructive && "hover:bg-accent-900 focus:ring-accent-500 hover:text-accent-100",
+    !disabled && !destructive && !className && "hover:bg-accent-900 focus:ring-accent-500 hover:text-accent-100",
     !disabled && destructive && "hover:bg-red-700 focus:ring-red-500"
   );
 
@@ -40,7 +40,7 @@ export default function ButtonPrimary({ className = "", type = "button", onClick
                 disabled && "cursor-not-allowed opacity-75",
                 !destructive && "bg-accent-800",
                 destructive && "bg-red-600",
-                !disabled && !destructive && "hover:bg-accent-900 hover:text-accent-100 focus:ring-accent-500",
+                !disabled && !destructive && !className && "hover:bg-accent-900 hover:text-accent-100 focus:ring-accent-500",
                 !disabled && destructive && "hover:bg-red-700 focus:ring-red-500"
               )}
             >
@@ -64,7 +64,7 @@ export default function ButtonPrimary({ className = "", type = "button", onClick
                 disabled && "cursor-not-allowed opacity-75",
                 !destructive && "bg-accent-800",
                 destructive && "bg-red-600",
-                !disabled && !destructive && "hover:bg-accent-900 hover:text-accent-100 focus:ring-accent-500",
+                !disabled && !destructive && !className && "hover:bg-accent-900 hover:text-accent-100 focus:ring-accent-500",
                 !disabled && destructive && "hover:bg-red-700 focus:ring-red-500"
               )}
             >

@@ -1,7 +1,7 @@
 import { LogoCloudsBlockDto } from "~/application/dtos/marketing/LogoCloudsBlockDto";
-import LogoCloudsCustom from "~/components/ui/images/LogoCloudsCustom";
-import LogoCloudsSimple from "~/components/ui/images/LogoCloudsSimple";
-import LogoCloudsSimpleWithHeading from "~/components/ui/images/LogoCloudsSimpleWithHeading";
+import LogoCloudsCustom from "./variants/gallery/LogoCloudsCustom";
+import LogoCloudsSimple from "./variants/gallery/LogoCloudsSimple";
+import LogoCloudsSimpleWithHeading from "./variants/gallery/LogoCloudsSimpleWithHeading";
 
 export default function LogoClouds({ item }: { item: LogoCloudsBlockDto }) {
   return (
