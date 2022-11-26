@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunityBlockDto, CommunityBlockStyle } from "~/application/dtos/marketing/CommunityBlockDto";
-import InfoBanner from "~/components/ui/banners/InfoBanner";
+import WarningBanner from "~/components/ui/banners/WarningBanner";
 import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
 import InputGroup from "~/components/ui/forms/InputGroup";
 import XIcon from "~/components/ui/icons/XIcon";
@@ -107,7 +107,7 @@ export default function CommunityBlockForm({ item, onUpdate }: { item?: Communit
             </div>
           )}
           {state.type === "github" && (
-            <InfoBanner
+            <WarningBanner
               title="GitHub members"
               text={
                 <div>

@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { forwardRef, ReactNode, Ref, RefObject, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import HintTooltip from "~/components/ui/tooltips/HintTooltip";
 import Editor from "@monaco-editor/react";
 
 export interface RefInputText {
@@ -128,7 +127,6 @@ const InputText = (
               {title}
               {required && <span className="ml-1 text-red-500">*</span>}
             </div>
-            <div className="">{help && <HintTooltip text={help} />}</div>
           </div>
           {withTranslation && value?.includes(".") && (
             <div className="truncate font-light italic text-slate-600" title={t(value, translationParams ?? [])}>

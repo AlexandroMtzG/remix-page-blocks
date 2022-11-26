@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
-import HintTooltip from "../tooltips/HintTooltip";
 
 interface Props {
   name?: string;
@@ -18,8 +17,6 @@ export default function InputCheckboxWithDescription({ name, title, value, setVa
       <div className="min-w-0 flex-1 text-sm">
         <label htmlFor={name} className="cursor-pointer select-none">
           <div className="font-medium text-gray-700">{title}</div>
-
-          {help && <HintTooltip text={help} />}
 
           <div id={name + "-description"} className="text-gray-400">
             {description}

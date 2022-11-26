@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BannerBlockDto } from "~/application/dtos/marketing/BannerBlockDto";
-import MegaphoneIcon from "~/components/ui/icons/emails/MegaphoneIcon";
+import MegaphoneIcon from "~/components/ui/icons/MegaphoneIcon";
 import XIcon from "~/components/ui/icons/XIcon";
 
 export default function BannerBottom({ item }: { item: BannerBlockDto }) {

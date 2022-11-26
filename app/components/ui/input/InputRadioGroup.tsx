@@ -1,6 +1,6 @@
 import { RadioGroup } from "@headlessui/react";
-import { ReactNode } from "react";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 interface Props {
   name?: string;
