@@ -5,7 +5,7 @@ import Logo from "~/components/front/Logo";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { HeaderBlockDto } from "~/application/dtos/marketing/HeaderBlockDto";
-import HeaderFlyoutItem from "~/components/ui/headers/HeaderFlyoutItem";
+import HeaderFlyoutItem from "~/components/ui/HeaderFlyoutItem";
 import Icon from "~/components/front/Icon";
 import LocaleSelector from "~/components/toggles/LocaleSelector";
 import DarkModeToggle from "~/components/toggles/DarkModeToggle";

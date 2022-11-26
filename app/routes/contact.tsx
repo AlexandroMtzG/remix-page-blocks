@@ -3,10 +3,10 @@ import Header from "~/components/front/Header";
 import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { useTranslation } from "react-i18next";
 import { i18nHelper } from "~/locale/i18n.utils";
-import ServerError from "~/components/ui/errors/ServerError";
+import ServerError from "~/components/ui/ServerError";
 import { Language } from "remix-i18next";
 import { useLoaderData } from "@remix-run/react";
-import WarningBanner from "~/components/ui/banners/WarningBanner";
+import WarningBanner from "~/components/ui/WarningBanner";
 
 type LoaderData = {
   title: string;

@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { FeaturesBlockDto } from "~/application/dtos/marketing/FeaturesBlockDto";
-import CheckIcon from "~/components/ui/icons/CheckIcon";
+import CheckIcon from "~/components/icons/CheckIcon";
 
 export default function FeaturesList({ item }: { item: FeaturesBlockDto }) {
   const { t } = useTranslation();

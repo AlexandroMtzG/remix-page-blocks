@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { VideoBlockDto, VideoBlockStyle } from "~/application/dtos/marketing/VideoBlockDto";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
+import InputGroup from "~/components/ui/InputGroup";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 
 export default function VideoBlockForm({ item, onUpdate }: { item?: VideoBlockDto; onUpdate: (item: VideoBlockDto) => void }) {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
-import ButtonPrimary from "~/components/ui/buttons/ButtonPrimary";
-import InputText from "~/components/ui/input/InputText";
+import ButtonPrimary from "~/components/ui/ButtonPrimary";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 import { defaultLandingPage } from "~/utils/services/pages/defaultLandingPage";
 import { saasrockLandingPage } from "~/utils/services/pages/templates/saasrockLandingPage";

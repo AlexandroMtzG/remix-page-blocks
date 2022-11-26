@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunityBlockDto, CommunityBlockStyle } from "~/application/dtos/marketing/CommunityBlockDto";
-import WarningBanner from "~/components/ui/banners/WarningBanner";
-import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import XIcon from "~/components/ui/icons/XIcon";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputSelector from "~/components/ui/input/InputSelector";
-import InputText from "~/components/ui/input/InputText";
+import WarningBanner from "~/components/ui/WarningBanner";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
+import InputGroup from "~/components/ui/InputGroup";
+import XIcon from "~/components/icons/XIcon";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputSelector from "~/components/ui/InputSelector";
+import InputText from "~/components/ui/InputText";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 
 export default function CommunityBlockForm({ item, onUpdate }: { item?: CommunityBlockDto; onUpdate: (item: CommunityBlockDto) => void }) {

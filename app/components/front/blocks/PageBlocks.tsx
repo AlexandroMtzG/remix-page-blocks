@@ -9,20 +9,20 @@ import Features from "./Features";
 import Newsletter from "./Newsletter";
 import clsx from "clsx";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
-import SlideOverWideEmpty from "../../ui/slideOvers/SlideOverWideEmpty";
+import SlideOverWideEmpty from "../../ui/SlideOverWideEmpty";
 import PageBlockForm from "../../pages/blocks/PageBlockForm";
 import Banner from "./Banner";
 import Header from "../Header";
 import Footer from "../Footer";
-import ButtonSecondary from "../../ui/buttons/ButtonSecondary";
-import PencilIcon from "../../ui/icons/PencilIcon";
 import UpArrow from "../../icons/UpArrow";
 import DownArrow from "../../icons/DownArrow";
-import TrashEmptyIcon from "../../ui/icons/TrashEmptyIcon";
-import PlusIcon from "../../ui/icons/PlusIcon";
-import Modal from "../../ui/modals/Modal";
+import Modal from "../../ui/Modal";
 import Gallery from "./Gallery";
 import Faq from "./Faq";
+import PencilIcon from "~/components/icons/PencilIcon";
+import PlusIcon from "~/components/icons/PlusIcon";
+import TrashEmptyIcon from "~/components/icons/TrashEmptyIcon";
+import ButtonSecondary from "~/components/ui/ButtonSecondary";
 
 export default function PageBlocks({ items, editMode, onChange }: { items: PageBlockDto[]; editMode?: boolean; onChange?: (items: PageBlockDto[]) => void }) {
   const [blocks, setBlocks] = useState(items);

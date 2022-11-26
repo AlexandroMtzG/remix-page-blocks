@@ -1,10 +1,10 @@
 import { useSearchParams } from "@remix-run/react";
 import { useState } from "react";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
-import ButtonSecondary from "~/components/ui/buttons/ButtonSecondary";
-import Modal from "~/components/ui/modals/Modal";
-import OpenErrorModal from "~/components/ui/modals/OpenErrorModal";
-import OpenSuccessModal from "~/components/ui/modals/OpenSuccessModal";
+import ButtonSecondary from "~/components/ui/ButtonSecondary";
+import Modal from "~/components/ui/Modal";
+import OpenErrorModal from "~/components/ui/OpenErrorModal";
+import OpenSuccessModal from "~/components/ui/OpenSuccessModal";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 import TemplateEditor from "./TemplateEditor";
 

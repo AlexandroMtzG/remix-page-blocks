@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FooterBlockDto, FooterBlockStyle, FooterSectionDto } from "~/application/dtos/marketing/FooterBlockDto";
-import ButtonTertiary from "~/components/ui/buttons/ButtonTertiary";
-import InputGroup from "~/components/ui/forms/InputGroup";
-import InputRadioGroup from "~/components/ui/input/InputRadioGroup";
-import InputText from "~/components/ui/input/InputText";
-import CollapsibleRow from "~/components/ui/tables/CollapsibleRow";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
+import InputGroup from "~/components/ui/InputGroup";
+import InputRadioGroup from "~/components/ui/InputRadioGroup";
+import InputText from "~/components/ui/InputText";
+import CollapsibleRow from "~/components/ui/CollapsibleRow";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 import SocialsBlockForm from "./SocialsBlockForm";
 
