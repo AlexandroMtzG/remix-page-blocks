@@ -160,7 +160,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
         })}
 
         {editMode && <AddBlockButton className={clsx(items.length === 0 && "py-8")} onAdd={(type) => addBlock(type)} />}
-        <SlideOverWideEmpty title={PageBlockUtils.getTypeTitle(editinBlockType)} open={editingBlock !== undefined} onClose={() => setEditingBlock(undefined)}>
+        <SlideOverWideEmpty title={PageBlockUtils.getTypeTitle(editinBlockType)} open={editingBlockIndex !== -1} onClose={() => setEditingBlockIndex(-1)}>
           {editingBlock && <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} />}
         </SlideOverWideEmpty>
       </div>
