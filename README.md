@@ -1,6 +1,6 @@
 # Remix Page Blocks
 
-Ready-to-use Remix + Tailwind CSS **routes** and **UI** components + a block editor.
+Remix and Tailwind CSS simple page block editor.
 
 ![Remix Page Blocks](https://yahooder.sirv.com/remixblocks/page-blocks/cover.png)
 
