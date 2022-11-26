@@ -23,8 +23,10 @@ import PencilIcon from "~/components/icons/PencilIcon";
 import PlusIcon from "~/components/icons/PlusIcon";
 import TrashEmptyIcon from "~/components/icons/TrashEmptyIcon";
 import ButtonSecondary from "~/components/ui/ButtonSecondary";
+import { useTranslation } from "react-i18next";
 
 export default function PageBlocks({ items, editMode, onChange }: { items: PageBlockDto[]; editMode?: boolean; onChange?: (items: PageBlockDto[]) => void }) {
+  const { t } = useTranslation();
   const [blocks, setBlocks] = useState(items);
   const [editingBlockIndex, setEditingBlockIndex] = useState(-1);
   const [editingBlock, setEditingBlock] = useState<PageBlockDto>();
@@ -88,6 +90,13 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
         return newBlocks;
       });
     }
+  }
+
+  function onClose() {
+    setSlideOverOpen(false);
+    setEditingBlockIndex(-1);
+    setEditingBlock(undefined);
+    setEditingBlockType("");
   }
 
   return (
@@ -166,9 +175,16 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
           className="relative z-10"
           title={PageBlockUtils.getTypeTitle(editinBlockType)}
           open={slideOverOpen}
-          onClose={() => setSlideOverOpen(false)}
+          onClose={onClose}
+          buttons={
+            <>
+              <ButtonSecondary onClick={onClose}>{t("shared.close")}</ButtonSecondary>
+            </>
+          }
         >
-          {editingBlock && <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} />}
+          {editingBlock && (
+            <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} onClose={() => setSlideOverOpen(false)} />
+          )}
         </SlideOverWideEmpty>
       </div>
     </Fragment>
