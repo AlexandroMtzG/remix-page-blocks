@@ -7,7 +7,12 @@ export default function TestimonialsSideBySideOnBrand({ item }: { item: Testimon
   const { t } = useTranslation();
   return (
     <section className="bg-theme-800">
-      <div className={clsx("flex w-full space-x-8 overflow-x-scroll px-16", item.testimonials.length === 1 ? "justify-center" : "justify-start")}>
+      <div
+        className={clsx(
+          "flex w-full flex-col overflow-x-scroll px-16 md:flex-row md:space-x-8",
+          item.testimonials.length === 1 ? "justify-center" : "justify-start"
+        )}
+      >
         {item.testimonials.map((testimonial, idx) => {
           return (
             <Fragment key={idx}>
@@ -17,8 +22,8 @@ export default function TestimonialsSideBySideOnBrand({ item }: { item: Testimon
                   "py-12 px-4 sm:px-6 md:flex md:flex-col md:border-theme-900 md:py-16 md:pl-0",
                   idx < item.testimonials.length - 1 && "md:border-r md:pr-10 lg:pr-16",
                   item.testimonials.length === 1 && "w-full",
-                  item.testimonials.length === 2 && "w-1/2",
-                  item.testimonials.length === 3 && "w-1/3"
+                  item.testimonials.length === 2 && "md:w-1/2",
+                  item.testimonials.length === 3 && "md:w-1/3"
                 )}
               >
                 <div className="md:flex-shrink-0">
