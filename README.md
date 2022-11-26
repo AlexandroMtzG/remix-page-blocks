@@ -60,3 +60,29 @@ Check out my other open-source projects:
 - [RemixBlocks](https://github.com/AlexandroMtzG/remix-blocks)
 - [SaasFrontends](https://saasfrontends.com/)
 - [NetcoreSaas](https://netcoresaas.com/)
+
+## Screenshots
+
+### Landing Page
+
+![Landing Page](https://yahooder.sirv.com/remixblocks/page-blocks/landing.png)
+
+### Contact Page
+
+![Contact Page](https://yahooder.sirv.com/remixblocks/page-blocks/contact.png)
+
+### Newsletter Page
+
+![Newsletter Page](https://yahooder.sirv.com/remixblocks/page-blocks/newsletter.png)
+
+### Dark Mode
+
+![Dark Mode](https://yahooder.sirv.com/remixblocks/page-blocks/dark-mode.png)
+
+### Multi-Language
+
+![Multi-Language](https://yahooder.sirv.com/remixblocks/page-blocks/multi-language.png)
+
+### Multi-Theme
+
+![Multi-Theme](https://yahooder.sirv.com/remixblocks/page-blocks/multi-theme.png)
