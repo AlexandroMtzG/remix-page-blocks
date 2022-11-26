@@ -188,7 +188,7 @@ function AddBlockButton({ onAdd, className }: { onAdd: (type: string) => void; c
         </div>
       </div>
 
-      <Modal open={adding} setOpen={setAdding}>
+      <Modal open={adding} setOpen={(e) => setAdding(e)} className="z-10">
         <div className="text-gray-800">
           <div className="grid grid-cols-4 gap-3">
             {PageBlockUtils.types.map((type) => {
