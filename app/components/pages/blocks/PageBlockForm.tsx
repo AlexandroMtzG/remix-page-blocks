@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
+import ButtonSecondary from "~/components/ui/ButtonSecondary";
 import BannerBlockForm from "./BannerBlockForm";
 import CommunityBlockForm from "./CommunityBlockForm";
 import FaqBlockForm from "./FaqBlockForm";
@@ -16,8 +18,23 @@ interface Props {
   type: string;
   item?: PageBlockDto;
   onUpdate: (item: PageBlockDto) => void;
+  onClose: () => void;
 }
-export default function PageBlockForm({ type, item, onUpdate }: Props) {
+export default function PageBlockForm({ type, item, onUpdate, onClose }: Props) {
+  const { t } = useTranslation();
+  const block = Block({ type, item, onUpdate, onClose });
+
+  return (
+    <div>
+      {block}
+      <div className="mt-2 flex justify-end">
+        <ButtonSecondary onClick={onClose}>{t("shared.close")}</ButtonSecondary>
+      </div>
+    </div>
+  );
+}
+
+function Block({ type, item, onUpdate }: Props) {
   if (type === "banner") {
     return <BannerBlockForm item={item?.banner} onUpdate={(banner) => onUpdate({ banner })} />;
   } else if (type === "header") {
