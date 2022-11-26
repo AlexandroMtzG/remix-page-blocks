@@ -29,6 +29,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
   const [editingBlockIndex, setEditingBlockIndex] = useState(-1);
   const [editingBlock, setEditingBlock] = useState<PageBlockDto>();
   const [editinBlockType, setEditingBlockType] = useState<string>("");
+  const [slideOverOpen, setSlideOverOpen] = useState(false);
 
   useEffect(() => {
     if (onChange) {
@@ -43,6 +44,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
   function onEdit(block: PageBlockDto, index: number) {
     setEditingBlock(block);
     setEditingBlockType(PageBlockUtils.getType(block));
+    setSlideOverOpen(true);
     setEditingBlockIndex(index);
   }
   function onMoveUp(block: PageBlockDto) {
@@ -160,7 +162,12 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
         })}
 
         {editMode && <AddBlockButton className={clsx(items.length === 0 && "py-8")} onAdd={(type) => addBlock(type)} />}
-        <SlideOverWideEmpty title={PageBlockUtils.getTypeTitle(editinBlockType)} open={editingBlockIndex !== -1} onClose={() => setEditingBlockIndex(-1)}>
+        <SlideOverWideEmpty
+          className="relative z-10"
+          title={PageBlockUtils.getTypeTitle(editinBlockType)}
+          open={slideOverOpen}
+          onClose={() => setSlideOverOpen(false)}
+        >
           {editingBlock && <PageBlockForm type={editinBlockType} item={editingBlock} onUpdate={(e) => onUpdateEditingBlock(e)} />}
         </SlideOverWideEmpty>
       </div>
