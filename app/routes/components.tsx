@@ -133,16 +133,22 @@ export default function Components() {
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Headers" href="https://dev.daisyui.com/components/navbar/" />
+          <UiLibrary library="DaisyUI" title="Header" href="https://dev.daisyui.com/components/navbar/" />
           <div className="flex space-x-2">
             <Header item={PageBlockUtils.defaultBlocks.header!} />
           </div>
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="Tailblocks" title="Heros" href="https://tailblocks.cc/" />
+          <UiLibrary library="Tailblocks" title="Hero Simple" href="https://tailblocks.cc/" />
           <div className="relative space-y-6">
             <HeroDefault item={PageBlockUtils.defaultBlocks.hero!} />
+          </div>
+        </div>
+
+        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+          <UiLibrary library="Tailblocks" title="Hero with Image" href="https://tailblocks.cc/" />
+          <div className="relative space-y-6">
             <HeroWithImage item={PageBlockUtils.defaultBlocks.hero!} />
           </div>
         </div>
@@ -155,17 +161,29 @@ export default function Components() {
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="Tailblocks" title="Features" href="https://tailblocks.cc/" />
+          <UiLibrary library="Tailblocks" title="Features List" href="https://tailblocks.cc/" />
           <div className="space-y-6">
             <FeaturesList item={PageBlockUtils.defaultBlocks.features!} />
+          </div>
+        </div>
+
+        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+          <UiLibrary library="Tailblocks" title="Features with Cards" href="https://tailblocks.cc/" />
+          <div className="space-y-6">
             <FeaturesCards item={PageBlockUtils.defaultBlocks.features!} />
           </div>
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="Tailblocks" title="Newsletter" href="https://tailblocks.cc/" />
+          <UiLibrary library="Tailblocks" title="Newsletter Simple" href="https://tailblocks.cc/" />
           <div className="space-y-6">
             <NewsletterSimple item={PageBlockUtils.defaultBlocks.newsletter!} />
+          </div>
+        </div>
+
+        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+          <UiLibrary library="Tailblocks" title="Newsletter with Right Form" href="https://tailblocks.cc/" />
+          <div className="space-y-6">
             <NewsletterRightForm item={PageBlockUtils.defaultBlocks.newsletter!} />
           </div>
         </div>
