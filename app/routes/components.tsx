@@ -50,73 +50,79 @@ export default function Components() {
     <div className="relative">
       <Header />
       <div className="mx-auto max-w-5xl space-y-4 py-4 pb-12">
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Buttons" href="https://dev.daisyui.com/components/button/" />
-          <div className="flex space-x-2">
-            <ButtonPrimary>Primary</ButtonPrimary> <ButtonPrimary destructive>Primary Destructive</ButtonPrimary>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Buttons" href="https://dev.daisyui.com/components/button/" />
+            <div className="flex space-x-2">
+              <ButtonPrimary>Primary</ButtonPrimary> <ButtonPrimary destructive>Primary Destructive</ButtonPrimary>
+            </div>
+            <div className="flex space-x-2">
+              <ButtonSecondary>Secondary</ButtonSecondary> <ButtonSecondary destructive>Secondary Destructive</ButtonSecondary>
+            </div>
+            <div className="flex space-x-2">
+              <ButtonTertiary>Tertiary</ButtonTertiary> <ButtonTertiary destructive>Tertiary Destructive</ButtonTertiary>
+            </div>
           </div>
-          <div className="flex space-x-2">
-            <ButtonSecondary>Secondary</ButtonSecondary> <ButtonSecondary destructive>Secondary Destructive</ButtonSecondary>
-          </div>
-          <div className="flex space-x-2">
-            <ButtonTertiary>Tertiary</ButtonTertiary> <ButtonTertiary destructive>Tertiary Destructive</ButtonTertiary>
+
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Links" href="https://dev.daisyui.com/components/button/" />
+            <div className="flex space-x-2">
+              <ButtonPrimary to="/components">Primary</ButtonPrimary>
+              <ButtonPrimary destructive to="/components">
+                Primary Destructive
+              </ButtonPrimary>
+            </div>
+            <div className="flex space-x-2">
+              <ButtonSecondary to="/components">Secondary</ButtonSecondary>
+              <ButtonSecondary destructive to="/components">
+                Secondary Destructive
+              </ButtonSecondary>
+            </div>
+            <div className="flex space-x-2">
+              <ButtonTertiary to="/components">Tertiary</ButtonTertiary>
+              <ButtonTertiary destructive to="/components">
+                Tertiary Destructive
+              </ButtonTertiary>
+            </div>
           </div>
         </div>
 
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Links" href="https://dev.daisyui.com/components/button/" />
-          <div className="flex space-x-2">
-            <ButtonPrimary to="/components">Primary</ButtonPrimary>
-            <ButtonPrimary destructive to="/components">
-              Primary Destructive
-            </ButtonPrimary>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Input" href="https://dev.daisyui.com/components/input/" />
+            <InputText title="Input Text" />
+            <InputNumber title="Input Number" />
           </div>
-          <div className="flex space-x-2">
-            <ButtonSecondary to="/components">Secondary</ButtonSecondary>
-            <ButtonSecondary destructive to="/components">
-              Secondary Destructive
-            </ButtonSecondary>
-          </div>
-          <div className="flex space-x-2">
-            <ButtonTertiary to="/components">Tertiary</ButtonTertiary>
-            <ButtonTertiary destructive to="/components">
-              Tertiary Destructive
-            </ButtonTertiary>
+
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Checkbox" href="https://dev.daisyui.com/components/checkbox/" />
+            <InputCheckbox name="simple" title="Input Checkbox" />
+            <InputCheckbox name="toggle" title="Input Toggle" asToggle={true} />
+            <InputCheckboxWithDescription name="with-description" title="Input Checkbox with Description" description="Description" />
           </div>
         </div>
 
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Input" href="https://dev.daisyui.com/components/input/" />
-          <InputText title="Input Text" />
-          <InputNumber title="Input Number" />
-        </div>
-
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Checkbox" href="https://dev.daisyui.com/components/checkbox/" />
-          <InputCheckbox name="simple" title="Input Checkbox" />
-          <InputCheckbox name="toggle" title="Input Toggle" asToggle={true} />
-          <InputCheckboxWithDescription name="with-description" title="Input Checkbox with Description" description="Description" />
-        </div>
-
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Alerts" href="https://dev.daisyui.com/components/alert/" />
-          <div className="flex space-x-2">
-            <WarningBanner title="Title" text="Text" />
+        <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Alerts" href="https://dev.daisyui.com/components/alert/" />
+            <div className="flex space-x-2">
+              <WarningBanner title="Title" text="Text" />
+            </div>
           </div>
-        </div>
 
-        <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
-          <UiLibrary library="DaisyUI" title="Modals" href="https://dev.daisyui.com/components/modal/" />
-          <div className="flex space-x-2">
-            <ButtonPrimary onClick={() => setSuccess({ title: "Success title", description: "Success description", closeText: "Close text" })}>
-              Success
-            </ButtonPrimary>
-            <ButtonPrimary destructive onClick={() => setError({ title: "Error title", description: "Error description", closeText: "Close text" })}>
-              Error
-            </ButtonPrimary>
+          <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
+            <UiLibrary library="DaisyUI" title="Modals" href="https://dev.daisyui.com/components/modal/" />
+            <div className="flex space-x-2">
+              <ButtonPrimary onClick={() => setSuccess({ title: "Success title", description: "Success description", closeText: "Close text" })}>
+                Success
+              </ButtonPrimary>
+              <ButtonPrimary destructive onClick={() => setError({ title: "Error title", description: "Error description", closeText: "Close text" })}>
+                Error
+              </ButtonPrimary>
+            </div>
+            <OpenModal type="success" {...success} closeText={success?.closeText} open={success !== undefined} onClose={() => setSuccess(undefined)} />
+            <OpenModal type="error" {...error} open={error !== undefined} onClose={() => setError(undefined)} />
           </div>
-          <OpenModal type="success" {...success} closeText={success?.closeText} open={success !== undefined} onClose={() => setSuccess(undefined)} />
-          <OpenModal type="error" {...error} open={error !== undefined} onClose={() => setError(undefined)} />
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">
