@@ -22,15 +22,15 @@ export default function FeaturesCards({ item }: { item: FeaturesBlockDto }) {
               <div
                 key={idx}
                 className={clsx(
-                  "p-4",
-                  item.columns === 1 && "md:w-full",
-                  item.columns === 2 && "md:w-1/2",
-                  item.columns === 3 && "md:w-1/3",
-                  item.columns === 4 && "md:w-1/4",
-                  item.columns === 5 && "md:w-1/5",
-                  item.columns === 6 && "md:w-1/6",
-                  item.columns === 7 && "md:w-1/7",
-                  item.columns === 8 && "md:w-1/8"
+                  "w-full p-4",
+                  item.columns === 1 && "w-full lg:w-full",
+                  item.columns === 2 && "w-full lg:w-1/2",
+                  item.columns === 3 && "w-full lg:w-1/3",
+                  item.columns === 4 && "w-full lg:w-1/4",
+                  item.columns === 5 && "w-full lg:w-1/5",
+                  item.columns === 6 && "w-full lg:w-1/6",
+                  item.columns === 7 && "lg:w-1/7 w-full",
+                  item.columns === 8 && "lg:w-1/8 w-full"
                 )}
               >
                 <div className="flex h-full flex-col rounded-lg bg-gray-100 p-8 dark:bg-gray-800">
@@ -58,9 +58,9 @@ export default function FeaturesCards({ item }: { item: FeaturesBlockDto }) {
                         <svg
                           fill="none"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           className="ml-2 h-4 w-4"
                           viewBox="0 0 24 24"
                         >

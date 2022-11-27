@@ -35,11 +35,16 @@ export default function HeroDefault({ item }: { item: HeroBlockDto }) {
               return (
                 <Fragment key={idx}>
                   {item.href.startsWith("http") ? (
-                    <a key={idx} href={item.href} target={item.target} className={clsx("btn-lg btn", item.isPrimary ? "btn-primary" : "btn-secondary")}>
+                    <a
+                      key={idx}
+                      href={item.href}
+                      target={item.target}
+                      className={clsx("btn-lg btn w-full sm:w-auto", item.isPrimary ? "btn-primary" : "btn-secondary")}
+                    >
                       {t(item.text)}
                     </a>
                   ) : (
-                    <Link key={idx} to={item.href} className={clsx("btn-lg btn", item.isPrimary ? "btn-primary" : "btn-secondary")}>
+                    <Link key={idx} to={item.href} className={clsx("btn-lg btn w-full sm:w-auto", item.isPrimary ? "btn-primary" : "btn-secondary")}>
                       {t(item.text)}
                     </Link>
                   )}

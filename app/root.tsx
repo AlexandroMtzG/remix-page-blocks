@@ -24,7 +24,11 @@ function Document({ children }: { children: React.ReactNode; title?: string }) {
   const rootData = useRootData();
 
   return (
-    <html key={rootData.userSession?.lng} lang={rootData.userSession?.lng} className={rootData.userSession?.lightOrDarkMode === "dark" ? "dark" : ""}>
+    <html
+      key={rootData.userSession?.lng}
+      lang={rootData.userSession?.lng}
+      className={clsx(rootData.userSession?.lightOrDarkMode === "dark" ? "dark bg-gray-900" : "", " bg-white")}
+    >
       <head>
         <Meta />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
@@ -36,12 +40,7 @@ function Document({ children }: { children: React.ReactNode; title?: string }) {
         <Links />
       </head>
 
-      <body
-        className={clsx(
-          "max-h-full min-h-screen max-w-full bg-white text-gray-800 dark:bg-slate-900 dark:text-white"
-          // location.pathname.startsWith("/app") || location.pathname.startsWith("/admin") ? "bg-slate-900" : "bg-white dark:bg-slate-900"
-        )}
-      >
+      <body className="max-h-full min-h-screen max-w-full bg-white text-gray-800 dark:bg-slate-900 dark:text-white">
         {children}
 
         {!rootData.debug && (
