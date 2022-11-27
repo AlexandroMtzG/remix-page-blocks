@@ -21,12 +21,12 @@ const defaultStyles = {
   footer: FooterBlockStyle.columns,
   hero: HeroBlockStyle.simple,
   gallery: GalleryBlockStyle.carousel,
-  logoClouds: LogoCloudsBlockStyle.custom,
+  logoClouds: LogoCloudsBlockStyle.simple,
   video: VideoBlockStyle.simple,
   community: CommunityBlockStyle.simple,
-  testimonials: TestimonialsBlockStyle.sideBySide,
+  testimonials: TestimonialsBlockStyle.simple,
   features: FeaturesBlockStyle.list,
-  newsletter: NewsletterBlockStyle.cardWithGraphic,
+  newsletter: NewsletterBlockStyle.rightForm,
   faq: FaqBlockStyle.simple,
 };
 
@@ -50,6 +50,7 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
         style: defaultStyles.hero,
         headline: t("blocks.hero.headline"),
         subheadline: t("blocks.hero.subheadline"),
+        image: "https://via.placeholder.com/720x600?text=Your%20Hero%20Image",
         cta: [
           {
             text: t("blocks.hero.cta.primary"),
@@ -136,13 +137,20 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
         ],
       },
     },
-    // Video
+    // Video #1
     {
       video: {
         style: defaultStyles.video,
         headline: t("blocks.video.headline"),
         subheadline: t("blocks.video.subheadline"),
         src: "https://www.loom.com/embed/eccf927d35cd4ad3b4a1d512257cea53",
+      },
+    },
+    // Video #2
+    {
+      video: {
+        style: defaultStyles.video,
+        src: "https://www.loom.com/embed/443b9ffaaef2497fa1f94a51579e96f8",
       },
     },
     // Community
@@ -179,7 +187,7 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
         style: defaultStyles.testimonials,
         headline: "Don't take our word for it.",
         subheadline: ``,
-        testimonials: [
+        items: [
           {
             role: "Developer",
             company: "SaasRock",
@@ -208,10 +216,11 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
     // Features #1
     {
       features: {
-        style: FeaturesBlockStyle.list,
+        style: FeaturesBlockStyle.cards,
         topText: t("blocks.features1.topText"),
         headline: t("blocks.features1.headline"),
         subheadline: t("blocks.features1.subheadline"),
+        columns: 3,
         items: [
           { name: t("blocks.features1.items.editor.name"), description: t("blocks.features1.items.editor.description") },
           { name: t("blocks.features1.items.landing.name"), description: t("blocks.features1.items.landing.description") },
@@ -226,10 +235,11 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
     // Features #2
     {
       features: {
-        style: defaultStyles.features,
+        style: FeaturesBlockStyle.list,
         topText: t("blocks.features2.topText"),
         headline: t("blocks.features2.headline"),
         subheadline: t("blocks.features2.subheadline"),
+        columns: 2,
         items: [
           {
             name: "Remix",
@@ -267,13 +277,30 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
       faq: {
         style: defaultStyles.faq,
         items: [
-          { question: "Question 1?", answer: "Answer 1." },
-          { question: "Question 2?", answer: "Answer 2." },
-          { question: "Question 3?", answer: "Answer 3." },
-          { question: "Question 4?", answer: "Answer 4." },
+          {
+            question: "Question 1?",
+            answer:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          },
+          {
+            question: "Question 2?",
+            answer:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          },
+          {
+            question: "Question 3?",
+            answer:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          },
+          {
+            question: "Question 4?",
+            answer:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          },
           {
             question: "Question 5 with link?",
-            answer: "Answer 5 with link.",
+            answer:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
             link: {
               text: "Visit my other boilerplates",
               href: "https://alexandromg.gumroad.com/?ref=remix-page-blocks-faq",

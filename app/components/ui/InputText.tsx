@@ -184,7 +184,7 @@ const InputText = (
               placeholder={placeholder}
               pattern={pattern !== "" && pattern !== undefined ? pattern : undefined}
               className={clsx(
-                "block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500 sm:text-sm",
+                "input-bordered input w-full",
                 className,
                 classNameBg,
                 disabled || readOnly ? "cursor-not-allowed bg-gray-100" : "hover:bg-gray-50 focus:bg-gray-50",

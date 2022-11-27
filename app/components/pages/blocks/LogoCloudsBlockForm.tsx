@@ -24,7 +24,6 @@ export default function LogoCloudsBlockForm({ item, onUpdate }: { item?: LogoClo
           setValue={(value) => setState({ ...state, style: value as LogoCloudsBlockStyle })}
           options={[
             { value: LogoCloudsBlockStyle.simple, name: "Simple" },
-            { value: LogoCloudsBlockStyle.simpleWithHeadingOnBrand, name: "Simple with Heading" },
             { value: LogoCloudsBlockStyle.custom, name: "Custom" },
           ]}
         />

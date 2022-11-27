@@ -34,7 +34,7 @@ export default function InputCheckboxWithDescription({ name, title, value, setVa
             setValue?.(e.target.checked);
           }}
           disabled={disabled}
-          className={clsx(disabled && "cursor-not-allowed bg-gray-100", "h-4 w-4 cursor-pointer rounded border-gray-300 text-accent-600 focus:ring-accent-500")}
+          className={clsx(disabled && "cursor-not-allowed bg-gray-100", "checkbox-primary checkbox")}
         />
       </div>
     </div>

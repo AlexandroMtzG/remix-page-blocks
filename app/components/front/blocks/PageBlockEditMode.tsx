@@ -65,12 +65,7 @@ export default function PageBlockEditMode({ items, onSetBlocks }: { items: PageB
       {isEditMode() && (
         <div className="bg-gray-900 p-2 text-gray-50 dark:bg-gray-50 dark:text-gray-900">
           <div className="flex justify-center space-x-3">
-            <a
-              href="https://github.com/AlexandroMtzG/remix-page-blocks"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center space-x-2 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-accent-700 shadow-sm hover:border-accent-300 hover:text-accent-900 focus:border-accent-300 focus:outline-none focus:ring-2 focus:ring-accent-500"
-            >
+            <ButtonSecondary to="https://github.com/AlexandroMtzG/remix-page-blocks" target="_blank">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   fillRule="evenodd"
@@ -78,7 +73,7 @@ export default function PageBlockEditMode({ items, onSetBlocks }: { items: PageB
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </ButtonSecondary>
             <ButtonSecondary onClick={toggleEditMode}>
               <div>
                 <span className="hidden sm:block">Exit Edit Mode</span>
@@ -108,7 +103,7 @@ export default function PageBlockEditMode({ items, onSetBlocks }: { items: PageB
         onClose={() => setMessage(undefined)}
       />
 
-      <OpenErrorModal title={message?.error?.title} description={message?.error?.message} open={!!message?.error} onClose={() => setMessage(undefined)} />
+      <OpenErrorModal title={message?.error?.message} open={!!message?.error} onClose={() => setMessage(undefined)} />
 
       <Modal open={settingTemplate} setOpen={setSettingTemplate}>
         <div>

@@ -35,7 +35,8 @@
       "legal": {
         "title": "Legal",
         "privacy": "Privacy policy",
-        "terms": "Terms of use"
+        "terms": "Terms of use",
+        "components": "Components"
       }
     },
     "banner": {
@@ -47,7 +48,7 @@
     "hero": {
       "headline": "Remix Page Blocks",
       "subheadline": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
-      "topText": "Remix v1.6.3 - Tailwind CSS v3.1.2",
+      "topText": "Remix 1.6.3 - Tailwind CSS 3.1.2 - DaisyUI 2.4.6",
       "cta": {
         "primary": "View on Github",
         "secondary": "Built by SaasRock"
@@ -107,8 +108,8 @@
       "subheadline": "The codebase comes with the latest technology out there: SSR, utility-first CSS, and TypeScript."
     },
     "newsletter": {
-      "headline": "Stay up to date",
-      "subheadline": "Subscribe to the newsletter to get product updates"
+      "headline": "Subscribe to our newsletter to get the latest updates",
+      "subheadline": "We send product updates, upcoming features, promotions, tutorials, and more."
     }
   },
   "contact": {
@@ -143,5 +144,5 @@
   "terms": {
     "headline": "Terms and Conditions"
   },
-  "copyright": "RemixBlocks, 2022 © All rights reserved."
+  "copyright": "Remix Page Blocks, 2022 © All rights reserved."
 }

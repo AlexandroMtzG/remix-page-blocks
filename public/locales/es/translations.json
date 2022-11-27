@@ -35,7 +35,8 @@
       "legal": {
         "title": "Legal",
         "privacy": "Política de privacidad",
-        "terms": "Términos y condiciones"
+        "terms": "Términos y condiciones",
+        "components": "Componentes"
       }
     },
     "banner": {
@@ -47,7 +48,7 @@
     "hero": {
       "headline": "Bloques de Páginas Remix",
       "subheadline": "Una colección de bloques funcionales: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, y más.",
-      "topText": "Remix v1.6.3 - Tailwind CSS v3.1.2",
+      "topText": "Remix 1.6.3 - Tailwind CSS 3.1.2 - DaisyUI 2.4.6",
       "cta": {
         "primary": "Ver en Github",
         "secondary": "Hecho por SaasRock"
@@ -107,8 +108,8 @@
       "subheadline": "Esta plantilla utiliza lo mejor en web dev: SSR, utility-first CSS, y TypeScript."
     },
     "newsletter": {
-      "headline": "Mantente al día",
-      "subheadline": "Suscríbete a nuestro boletín para recibir las últimas noticias y actualizaciones."
+      "headline": "Suscríbete a nuestro newsletter para obtener actualizaciones",
+      "subheadline": "Enviamos actualizaciones de producto, features en construcción, promociones, tutoriales, y más."
     }
   },
   "contact": {
@@ -143,5 +144,5 @@
   "terms": {
     "headline": "Términos y condiciones"
   },
-  "copyright": "RemixBlocks, 2022 © Todos los derechos reservados"
+  "copyright": "Remix Page Blocks, 2022 © Todos los derechos reservados"
 }

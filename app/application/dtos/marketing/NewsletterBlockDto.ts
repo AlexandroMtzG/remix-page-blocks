@@ -9,5 +9,5 @@ export interface NewsletterBlockDto {
 
 export enum NewsletterBlockStyle {
   simple = "simple",
-  cardWithGraphic = "cardWithGraphic",
+  rightForm = "rightForm",
 }

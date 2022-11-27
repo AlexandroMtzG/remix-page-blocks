@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { VideoBlockDto } from "~/application/dtos/marketing/VideoBlockDto";
 
@@ -5,7 +6,7 @@ export default function VideoSimple({ item }: { item: VideoBlockDto }) {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      <div className={clsx("mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8", (item.headline || item.subheadline) && "py-12 lg:py-24")}>
         <div className="space-y-8 sm:space-y-12">
           {(item.headline || item.subheadline) && (
             <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">

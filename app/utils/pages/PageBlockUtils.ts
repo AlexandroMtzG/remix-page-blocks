@@ -142,6 +142,7 @@ const defaultBlocks: PageBlockDto = {
     style: HeroBlockStyle.simple,
     headline: "Hero Headline",
     subheadline: "Hero Subheadline",
+    image: "https://via.placeholder.com/720x600?text=Your%20Hero%20Image",
     topText: {
       text: "Top text",
       link: { text: "Link", href: "#" },
@@ -229,7 +230,7 @@ const defaultBlocks: PageBlockDto = {
     style: TestimonialsBlockStyle.simple,
     headline: "Testimonials Headline",
     subheadline: "Testimonials Subheadline",
-    testimonials: [
+    items: [
       {
         role: "Developer",
         company: "SaasRock",
@@ -248,6 +249,7 @@ const defaultBlocks: PageBlockDto = {
     headline: "Features Headline",
     subheadline: "Features Subheadline",
     topText: "Top text",
+    columns: 3,
     items: [
       {
         name: "Remix",
@@ -286,7 +288,7 @@ const defaultBlocks: PageBlockDto = {
     ],
   },
   newsletter: {
-    style: NewsletterBlockStyle.cardWithGraphic,
+    style: NewsletterBlockStyle.rightForm,
     headline: "Newsletter Headline",
     subheadline: "Newsletter Subheadline",
     socials: {

@@ -22,8 +22,8 @@ import Faq from "./Faq";
 import PencilIcon from "~/components/icons/PencilIcon";
 import PlusIcon from "~/components/icons/PlusIcon";
 import TrashEmptyIcon from "~/components/icons/TrashEmptyIcon";
-import ButtonSecondary from "~/components/ui/ButtonSecondary";
 import { useTranslation } from "react-i18next";
+import ButtonTertiary from "~/components/ui/ButtonTertiary";
 
 export default function PageBlocks({ items, editMode, onChange }: { items: PageBlockDto[]; editMode?: boolean; onChange?: (items: PageBlockDto[]) => void }) {
   const { t } = useTranslation();
@@ -133,18 +133,18 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
                     <div className="mx-auto flex w-full max-w-md items-center justify-between">
                       <div className="text-lg font-extrabold text-gray-900">{PageBlockUtils.getTypeTitle(PageBlockUtils.getType(item))}</div>
                       <div className="flex items-center space-x-1">
-                        <ButtonSecondary destructive onClick={() => onRemove(item)}>
+                        <ButtonTertiary destructive onClick={() => onRemove(item)}>
                           <TrashEmptyIcon className="h-4 w-4" />
-                        </ButtonSecondary>
-                        <ButtonSecondary onClick={() => onEdit(item, idx)}>
+                        </ButtonTertiary>
+                        <ButtonTertiary onClick={() => onEdit(item, idx)}>
                           <PencilIcon className="h-4 w-4" />
-                        </ButtonSecondary>
-                        <ButtonSecondary onClick={() => onMoveUp(item)}>
+                        </ButtonTertiary>
+                        <ButtonTertiary onClick={() => onMoveUp(item)}>
                           <UpArrow className="h-4 w-4" />
-                        </ButtonSecondary>
-                        <ButtonSecondary onClick={() => onMoveDown(item)}>
+                        </ButtonTertiary>
+                        <ButtonTertiary onClick={() => onMoveDown(item)}>
                           <DownArrow className="h-4 w-4" />
-                        </ButtonSecondary>
+                        </ButtonTertiary>
                       </div>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
                 )}
                 <div
                   className={clsx(
-                    editMode && "rounded-md rounded-t-none border-2 border-t-0 border-b-0 border-dashed border-transparent group-hover:border-gray-800"
+                    editMode && "relative rounded-md rounded-t-none border-2 border-t-0 border-b-0 border-dashed border-transparent group-hover:border-gray-800"
                   )}
                 >
                   {item.banner && <Banner item={item.banner} />}
@@ -192,7 +192,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
             onClose={onClose}
             buttons={
               <>
-                <ButtonSecondary onClick={onClose}>{t("shared.close")}</ButtonSecondary>
+                <ButtonTertiary onClick={onClose}>{t("shared.close")}</ButtonTertiary>
               </>
             }
           >

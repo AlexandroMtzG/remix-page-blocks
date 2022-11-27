@@ -23,10 +23,7 @@ export default function FooterBlockForm({ item, onUpdate }: { item?: FooterBlock
           title="Style"
           value={state.style}
           setValue={(value) => setState({ ...state, style: value as FooterBlockStyle })}
-          options={[
-            { value: FooterBlockStyle.simple, name: "Simple" },
-            { value: FooterBlockStyle.columns, name: "Columns" },
-          ]}
+          options={[{ value: FooterBlockStyle.columns, name: "Columns" }]}
         />
       </InputGroup>
 
