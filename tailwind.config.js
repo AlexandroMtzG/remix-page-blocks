@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
+const themeColor = colors.indigo;
+const accentColor = colors.gray;
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}", "node_modules/daisyui/dist/**/*.js", "node_modules/react-daisyui/dist/**/*.js"],
   darkMode: "class",
@@ -34,28 +35,28 @@ module.exports = {
         fuchsia: colors.fuchsia,
         rose: colors.rose,
         theme: {
-          50: colors.indigo[50],
-          100: colors.indigo[100],
-          200: colors.indigo[200],
-          300: colors.indigo[300],
-          400: colors.indigo[400],
-          500: colors.indigo[500],
-          600: colors.indigo[600],
-          700: colors.indigo[700],
-          800: colors.indigo[800],
-          900: colors.indigo[900],
+          50: themeColor[50],
+          100: themeColor[100],
+          200: themeColor[200],
+          300: themeColor[300],
+          400: themeColor[400],
+          500: themeColor[500],
+          600: themeColor[600],
+          700: themeColor[700],
+          800: themeColor[800],
+          900: themeColor[900],
         },
         accent: {
-          50: colors.gray[50],
-          100: colors.gray[100],
-          200: colors.gray[200],
-          300: colors.gray[300],
-          400: colors.gray[400],
-          500: colors.gray[500],
-          600: colors.gray[600],
-          700: colors.gray[700],
-          800: colors.gray[800],
-          900: colors.gray[900],
+          50: accentColor[50],
+          100: accentColor[100],
+          200: accentColor[200],
+          300: accentColor[300],
+          400: accentColor[400],
+          500: accentColor[500],
+          600: accentColor[600],
+          700: accentColor[700],
+          800: accentColor[800],
+          900: accentColor[900],
         },
       },
     },
@@ -71,8 +72,8 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#4f46e5",
-          secondary: "#d1d5db",
+          primary: themeColor[500],
+          secondary: accentColor[200],
           accent: "#c4b5fd",
           neutral: "#3D4451",
           "base-100": "#FFFFFF",
