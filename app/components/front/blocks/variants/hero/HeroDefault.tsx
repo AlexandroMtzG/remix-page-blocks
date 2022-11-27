@@ -28,7 +28,7 @@ export default function HeroDefault({ item }: { item: HeroBlockDto }) {
             {/* <strong className="font-extrabold text-theme-700 sm:block">Increase Conversion.</strong> */}
           </h1>
 
-          <p className="mt-4 max-w-4xl sm:text-xl sm:leading-relaxed">{t(item.subheadline)}</p>
+          <p className="mx-auto mt-4 max-w-4xl sm:text-xl sm:leading-relaxed">{t(item.subheadline)}</p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {item.cta.map((item, idx) => {
