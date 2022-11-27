@@ -4,6 +4,7 @@ export interface HeroBlockDto {
   style: HeroBlockStyle | string;
   headline: string;
   subheadline: string;
+  image?: string;
   topText?: TextWithLinkDto;
   cta: {
     text: string;
@@ -16,5 +17,5 @@ export interface HeroBlockDto {
 
 export enum HeroBlockStyle {
   simple = "simple",
-  centered = "centered",
+  image = "image",
 }

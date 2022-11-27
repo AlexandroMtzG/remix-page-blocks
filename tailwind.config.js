@@ -4,14 +4,12 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "node_modules/daisyui/dist/**/*.js", "node_modules/react-daisyui/dist/**/*.js"],
   darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Roboto Mono", ...defaultTheme.fontFamily.sans],
-      },
       colors: {
+        ...colors,
         transparent: "transparent",
         current: "currentColor",
         indigo: colors.indigo,
@@ -60,49 +58,30 @@ module.exports = {
           900: colors.gray[900],
         },
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            maxWidth: "100%",
-          },
-        },
-        dark: {
-          css: {
-            color: theme("colors.gray.400"),
-            "h2, h3, h4, thead th": {
-              color: theme("colors.gray.200"),
-            },
-            "h2 small, h3 small, h4 small": {
-              color: theme("colors.gray.400"),
-            },
-            code: {
-              color: theme("colors.gray.200"),
-            },
-            hr: {
-              borderColor: theme("colors.gray.200"),
-              opacity: "0.05",
-            },
-            pre: {
-              boxShadow: "inset 0 0 0 1px rgb(255 255 255 / 0.1)",
-            },
-            a: {
-              color: theme("colors.white"),
-              borderBottomColor: theme("colors.sky.400"),
-            },
-            strong: {
-              color: theme("colors.gray.200"),
-            },
-            thead: {
-              color: theme("colors.gray.300"),
-              borderBottomColor: "rgb(148 163 184 / 0.2)",
-            },
-            "tbody tr": {
-              borderBottomColor: "rgb(148 163 184 / 0.1)",
-            },
-          },
-        },
-      }),
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp"), require("@tailwindcss/typography"), require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+    require("daisyui"),
+  ],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#4f46e5",
+          secondary: "#d1d5db",
+          accent: "#c4b5fd",
+          neutral: "#3D4451",
+          "base-100": "#FFFFFF",
+          info: "#3ABFF8",
+          success: "#36D399",
+          warning: "#FBBD23",
+          error: "#e11d48",
+        },
+      },
+    ],
+  },
 };

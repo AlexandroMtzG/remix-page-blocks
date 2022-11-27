@@ -1,6 +1,6 @@
-import { Switch } from "@headlessui/react";
 import clsx from "clsx";
-import { forwardRef, ReactNode, Ref, RefObject, useEffect, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, Fragment, ReactNode, Ref, RefObject, useEffect, useImperativeHandle, useRef, useState } from "react";
+import { Toggle } from "react-daisyui";
 
 export interface RefInputCheckbox {
   input: RefObject<HTMLInputElement>;
@@ -52,26 +52,21 @@ const InputCheckbox = (
       )}
       <div className={clsx("relative flex w-full rounded-md", withLabel && title && "mt-1")}>
         {asToggle ? (
-          <Switch
-            checked={toggle}
-            onChange={setToggle}
-            disabled={disabled || readOnly}
-            className={clsx(
-              toggle ? "bg-accent-600" : "bg-gray-200",
-              "relative inline-flex h-5 w-8 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
-              icon && "pl-10",
-              disabled && "cursor-not-allowed"
-            )}
-          >
+          <Fragment>
             <input type="hidden" readOnly name={name} value={value === true ? "true" : "false"} />
-            <span
-              aria-hidden="true"
+
+            <Toggle
+              checked={toggle}
+              onChange={(e) => setToggle(e.target.checked)}
+              disabled={disabled || readOnly}
               className={clsx(
-                toggle ? "translate-x-3" : "translate-x-0",
-                "pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                toggle ? "bg-accent-600" : "bg-gray-200",
+                "relative inline-flex h-5 w-8 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2",
+                icon && "pl-10",
+                disabled && "cursor-not-allowed"
               )}
             />
-          </Switch>
+          </Fragment>
         ) : (
           <input
             type="checkbox"
@@ -81,12 +76,7 @@ const InputCheckbox = (
             readOnly={readOnly}
             onChange={(e) => (setValue ? setValue(e.target.checked) : {})}
             disabled={disabled}
-            className={clsx(
-              (disabled || readOnly) && "cursor-not-allowed bg-gray-100",
-              "mt-1 h-6 w-6 cursor-pointer rounded border-gray-300 text-accent-800 focus:ring-accent-500",
-              className,
-              icon && "pl-10"
-            )}
+            className={clsx((disabled || readOnly) && "cursor-not-allowed bg-gray-100", "checkbox-primary checkbox", className, icon && "pl-10")}
           />
         )}
       </div>

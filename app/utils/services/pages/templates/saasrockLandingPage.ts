@@ -23,7 +23,7 @@ const defaultStyles = {
   community: CommunityBlockStyle.simple,
   testimonials: TestimonialsBlockStyle.simple,
   features: FeaturesBlockStyle.list,
-  newsletter: NewsletterBlockStyle.cardWithGraphic,
+  newsletter: NewsletterBlockStyle.rightForm,
   faq: FaqBlockStyle.simple,
 };
 
@@ -475,7 +475,7 @@ export function saasrockLandingPage() {
         style: defaultStyles.testimonials,
         headline: "Don't take our word for it.",
         subheadline: ``,
-        testimonials: [
+        items: [
           {
             role: "CEO",
             company: "Piloterr",
@@ -493,10 +493,11 @@ export function saasrockLandingPage() {
     // Features #1
     {
       features: {
-        style: FeaturesBlockStyle.grid2x2,
+        style: FeaturesBlockStyle.cards,
         topText: "Rock-solid features 🪨",
         headline: "A rock-solid starter kit",
         subheadline: "Everything you need to start to build an MVP, or to build a whole SaaS application in a few weeks.",
+        columns: 3,
         items: [
           {
             name: "Admin Portal",
@@ -600,6 +601,7 @@ export function saasrockLandingPage() {
         topText: "Powered by the best tools",
         headline: "First-class tech stack",
         subheadline: "The codebase comes with the latest technology out there: SSR, utility-first CSS, and first-class ORM.",
+        columns: 3,
         items: [
           {
             name: "Remix",
@@ -631,6 +633,7 @@ export function saasrockLandingPage() {
         topText: "Connect with your apps",
         headline: "Integrations",
         subheadline: "Using Webhooks by Zapier, integrate with +4,000 apps, such as Notion, Airtable, Google Sheets/Docs, and more.",
+        columns: 3,
         items: [
           {
             name: "Stripe",

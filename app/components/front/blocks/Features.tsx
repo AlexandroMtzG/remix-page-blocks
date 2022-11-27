@@ -1,12 +1,12 @@
 import { FeaturesBlockDto } from "~/application/dtos/marketing/FeaturesBlockDto";
-import FeaturesGrid2x2 from "./variants/features/FeaturesGrid2x2";
+import FeaturesCards from "././variants/features/FeaturesCards";
 import FeaturesList from "./variants/features/FeaturesList";
 
 export default function Features({ item }: { item: FeaturesBlockDto }) {
   return (
     <>
-      {item.style === "grid2x2" && <FeaturesGrid2x2 item={item} />}
       {item.style === "list" && <FeaturesList item={item} />}
+      {item.style === "cards" && <FeaturesCards item={item} />}
     </>
   );
 }

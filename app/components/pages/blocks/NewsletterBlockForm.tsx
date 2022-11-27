@@ -21,7 +21,7 @@ export default function NewsletterBlockForm({ item, onUpdate }: { item?: Newslet
           setValue={(value) => setState({ ...state, style: value as NewsletterBlockStyle })}
           options={[
             { value: NewsletterBlockStyle.simple, name: "Simple" },
-            { value: NewsletterBlockStyle.cardWithGraphic, name: "Card with Graphic" },
+            { value: NewsletterBlockStyle.rightForm, name: "Right Form" },
           ]}
         />
       </InputGroup>

@@ -7,6 +7,7 @@ import InputRadioGroup from "~/components/ui/InputRadioGroup";
 import InputText from "~/components/ui/InputText";
 import CollapsibleRow from "~/components/ui/CollapsibleRow";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
+import InputNumber from "~/components/ui/InputNumber";
 
 export default function FeaturesBlockForm({ item, onUpdate }: { item?: FeaturesBlockDto; onUpdate: (item: FeaturesBlockDto) => void }) {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ export default function FeaturesBlockForm({ item, onUpdate }: { item?: FeaturesB
           setValue={(value) => setState({ ...state, style: value as FeaturesBlockStyle })}
           options={[
             { value: FeaturesBlockStyle.list, name: "List" },
-            { value: FeaturesBlockStyle.grid2x2, name: "Grid 2x2" },
+            { value: FeaturesBlockStyle.cards, name: "Cards" },
           ]}
         />
       </InputGroup>
@@ -33,6 +34,7 @@ export default function FeaturesBlockForm({ item, onUpdate }: { item?: FeaturesB
           <InputText title="Top text" type="text" value={state.topText} setValue={(e) => setState({ ...state, topText: e.toString() })} />
           <InputText title="Headline" type="text" value={state.headline} setValue={(e) => setState({ ...state, headline: e.toString() })} />
           <InputText title="Subheadline" type="text" value={state.subheadline} setValue={(e) => setState({ ...state, subheadline: e.toString() })} />
+          <InputNumber title="Columns" value={state.columns} setValue={(e) => setState({ ...state, columns: Number(e) })} />
         </div>
       </InputGroup>
 

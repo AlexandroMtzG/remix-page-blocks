@@ -14,5 +14,4 @@ export interface LogoCloudDto {
 export enum LogoCloudsBlockStyle {
   custom = "custom",
   simple = "simple",
-  simpleWithHeadingOnBrand = "simpleWithHeadingOnBrand",
 }

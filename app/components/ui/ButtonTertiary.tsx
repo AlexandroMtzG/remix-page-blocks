@@ -24,15 +24,7 @@ export default function ButtonTertiary({ className = "", type = "button", onClic
               onClick={onClick}
               type={type}
               disabled={disabled}
-              className={clsx(
-                className,
-                "mx-1 my-2 inline-flex items-center space-x-2 border-b border-transparent text-sm font-medium focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2",
-                disabled ? "cursor-not-allowed opacity-75" : "hover:border-dotted",
-                !destructive && "border-b text-theme-700 ",
-                destructive && "text-red-600",
-                !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
-                !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
-              )}
+              className={clsx(className, "btn-outline btn-sm btn", destructive ? "btn-error" : "btn-primary")}
             >
               {children}
             </button>
@@ -40,37 +32,12 @@ export default function ButtonTertiary({ className = "", type = "button", onClic
         } else {
           return (
             <Fragment>
-              {to.startsWith("http:") || to.startsWith("https:") ? (
-                <a
-                  href={to}
-                  target={target}
-                  className={clsx(
-                    className,
-                    "mx-1 my-2 inline-flex items-center space-x-2 border-b border-transparent text-sm font-medium focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2",
-                    disabled ? "cursor-not-allowed opacity-75" : " hover:border-dotted",
-                    !destructive && "border-b text-theme-700 ",
-                    destructive && "text-red-600",
-                    !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
-                    !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
-                  )}
-                >
+              {to.startsWith("http") ? (
+                <a href={to} target={target} className={clsx(className, "btn-outline btn-sm btn", destructive ? "btn-error" : "btn-primary")}>
                   {children}
                 </a>
               ) : (
-                <Link
-                  reloadDocument
-                  to={to}
-                  target={target}
-                  className={clsx(
-                    className,
-                    "mx-1 my-2 inline-flex items-center space-x-2 border-b border-transparent text-sm font-medium focus:rounded-md focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2",
-                    disabled ? "cursor-not-allowed opacity-75" : " hover:border-dotted",
-                    !destructive && "border-b text-theme-700 ",
-                    destructive && "text-red-600",
-                    !disabled && !destructive && !className && "hover:text-theme-800 focus:text-theme-900 ",
-                    !disabled && destructive && "hover:border-red-300 hover:text-red-800 focus:text-red-900"
-                  )}
-                >
+                <Link reloadDocument to={to} target={target} className={clsx(className, "btn-outline btn-sm btn", destructive ? "btn-error" : "btn-primary")}>
                   {children}
                 </Link>
               )}

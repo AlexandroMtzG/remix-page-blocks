@@ -96,140 +96,93 @@ export default function NewsletterRoute() {
 
   return (
     <div>
-      <div>
+      <div className="relative">
         <Header />
         <div className="bg-white dark:bg-gray-900">
-          <div className="mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="sm:align-center sm:flex sm:flex-col">
-              <div className="relative mx-auto w-full max-w-2xl overflow-hidden py-12 px-2 sm:py-6">
-                <svg className="absolute left-full translate-x-1/2 transform" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
-                  <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <rect x="0" y="0" width="4" height="4" className="text-gray-200 dark:text-black" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
-                </svg>
-                <svg
-                  className="absolute right-full bottom-0 -translate-x-1/2 transform"
-                  width="404"
-                  height="404"
-                  fill="none"
-                  viewBox="0 0 404 404"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <rect x="0" y="0" width="4" height="4" className="text-gray-200 dark:text-black" fill="currentColor" />
-                    </pattern>
-                  </defs>
-                  <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
-                </svg>
-                <div className="text-center">
-                  <h1 className="text-3xl font-extrabold tracking-tight text-gray-800 dark:text-slate-200 sm:text-4xl">{t("newsletter.headline")}</h1>
-                  <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">{t("newsletter.subheadline")}</p>
+          <div className="relative mx-auto w-full max-w-7xl overflow-hidden px-4 py-12 sm:px-6 sm:py-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-3xl font-extrabold tracking-tight text-gray-800 dark:text-slate-200 sm:text-4xl">{t("newsletter.headline")}</h1>
+              <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">{t("newsletter.subheadline")}</p>
+            </div>
+            <div className="mx-auto mt-14 max-w-xl">
+              <Form ref={formRef} replace method="post" aria-hidden={state === "success"} className="mt-9 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <input name="action" type="hidden" value="subscribe" readOnly hidden />
+                <input name="source" type="hidden" value="newsletter" readOnly hidden />
+                <div>
+                  <label htmlFor="first_name" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
+                    {t("newsletter.form.firstName")}
+                    <span className="ml-1 text-red-500">*</span>
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      required
+                      type="text"
+                      name="first_name"
+                      id="first_name"
+                      autoComplete="given-name"
+                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                    />
+                  </div>
                 </div>
-                <div className="mx-auto mt-12 max-w-xl">
-                  <Form ref={formRef} replace method="post" aria-hidden={state === "success"} className="mt-9 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                    <input name="action" type="hidden" value="subscribe" readOnly hidden />
-                    <input name="source" type="hidden" value="newsletter" readOnly hidden />
-                    <div>
-                      <label htmlFor="first_name" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
-                        {t("newsletter.form.firstName")}
-                        <span className="ml-1 text-red-500">*</span>
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          required
-                          type="text"
-                          name="first_name"
-                          id="first_name"
-                          autoComplete="given-name"
-                          className="relative block w-full appearance-none rounded-none rounded-b-sm border-gray-300 bg-gray-50 px-3 py-2 text-gray-800 placeholder-gray-500 focus:z-10 focus:border-theme-300 focus:outline-none focus:ring-theme-300 dark:border-gray-600 dark:bg-gray-900 dark:text-slate-200 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="last_name" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
-                        {t("newsletter.form.lastName")}
-                        <span className="ml-1 text-red-500">*</span>
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          type="text"
-                          name="last_name"
-                          id="last_name"
-                          autoComplete="family-name"
-                          className="relative block w-full appearance-none rounded-none rounded-b-sm border-gray-300 bg-gray-50 px-3 py-2 text-gray-800 placeholder-gray-500 focus:z-10 focus:border-theme-300 focus:outline-none focus:ring-theme-300 dark:border-gray-600 dark:bg-gray-900 dark:text-slate-200 sm:text-sm"
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
-                        {t("newsletter.form.email")}
-                        <span className="ml-1 text-red-500">*</span>
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          required
-                          aria-label="Email address"
-                          aria-describedby="error-message"
-                          id="email"
-                          name="email"
-                          type="email"
-                          autoComplete="email"
-                          className="relative block w-full appearance-none rounded-none rounded-b-sm border-gray-300 bg-gray-50 px-3 py-2 text-gray-800 placeholder-gray-500 focus:z-10 focus:border-theme-300 focus:outline-none focus:ring-theme-300 dark:border-gray-600 dark:bg-gray-900 dark:text-slate-200 sm:text-sm"
-                        />
-                      </div>
-                    </div>
+                <div>
+                  <label htmlFor="last_name" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
+                    {t("newsletter.form.lastName")}
+                    <span className="ml-1 text-red-500">*</span>
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      type="text"
+                      name="last_name"
+                      id="last_name"
+                      autoComplete="family-name"
+                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                    />
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-slate-500">
+                    {t("newsletter.form.email")}
+                    <span className="ml-1 text-red-500">*</span>
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      required
+                      aria-label="Email address"
+                      aria-describedby="error-message"
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                    />
+                  </div>
+                </div>
 
-                    <div className="flex items-baseline justify-between space-x-2 sm:col-span-2">
+                <div className="flex items-baseline justify-between space-x-2 sm:col-span-2">
+                  <div>
+                    {state === "success" ? (
                       <div>
-                        {state === "success" ? (
-                          <div>
-                            <p>{t("newsletter.checkEmail")}</p>
-                          </div>
-                        ) : state === "error" ? (
-                          <p>{actionData.message}</p>
-                        ) : (
-                          <div></div>
-                        )}
+                        <p>{t("newsletter.checkEmail")}</p>
                       </div>
-                      <button
-                        type="submit"
-                        disabled={state === "submitting"}
-                        className={clsx(
-                          "inline-flex justify-center rounded-sm border border-transparent bg-theme-500 py-2 px-4 text-sm font-medium text-white shadow-sm focus:outline-none",
-                          state === "submitting"
-                            ? "cursor-not-allowed opacity-80"
-                            : "hover:bg-theme-600 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-theme-600"
-                        )}
-                      >
-                        {state === "submitting" ? t("newsletter.subscribing") + "..." : t("newsletter.subscribe")}
-                      </button>
-                    </div>
-                  </Form>
+                    ) : state === "error" ? (
+                      <p>{actionData.message}</p>
+                    ) : (
+                      <div></div>
+                    )}
+                  </div>
+                  <button type="submit" disabled={state === "submitting"} className={clsx("btn-primary btn", state === "submitting" && "cursor-not-allowed")}>
+                    {state === "submitting" ? t("newsletter.subscribing") + "..." : t("newsletter.subscribe")}
+                  </button>
                 </div>
-              </div>
+              </Form>
             </div>
           </div>
         </div>
         <Footer></Footer>
       </div>
 
-      <OpenSuccessModal
-        title={t("shared.success")}
-        description={actionResult?.success?.toString() ?? ""}
-        open={!!actionResult?.success}
-        onClose={() => setActionResult(undefined)}
-      />
-
-      <OpenErrorModal
-        title={t("shared.error")}
-        description={actionResult?.error?.toString() ?? ""}
-        open={!!actionResult?.error}
-        onClose={() => setActionResult(undefined)}
-      />
+      <OpenSuccessModal title={actionResult?.success?.toString() ?? ""} open={!!actionResult?.success} onClose={() => setActionResult(undefined)} />
+      <OpenErrorModal title={actionResult?.error?.toString() ?? ""} open={!!actionResult?.error} onClose={() => setActionResult(undefined)} />
     </div>
   );
 }

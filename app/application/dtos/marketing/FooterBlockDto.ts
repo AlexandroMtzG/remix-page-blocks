@@ -13,6 +13,5 @@ export interface FooterSectionDto {
 }
 
 export enum FooterBlockStyle {
-  simple = "simple",
   columns = "columns",
 }

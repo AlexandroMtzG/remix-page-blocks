@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { MouseEventHandler, ReactNode } from "react";
+import { Fragment, MouseEventHandler, ReactNode } from "react";
 import clsx from "clsx";
 
 interface Props {
@@ -19,40 +19,23 @@ export default function ButtonSecondary({ className = "", type = "button", onCli
       {(() => {
         if (!to || disabled) {
           return (
-            <button
-              onClick={onClick}
-              type={type}
-              disabled={disabled}
-              className={clsx(
-                className,
-                "inline-flex items-center space-x-2 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-sm focus:border-accent-300 focus:outline-none focus:ring-2",
-                disabled && "cursor-not-allowed opacity-75",
-                !destructive && "text-accent-700",
-                destructive && "text-red-700",
-                !disabled && !destructive && !className && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
-                !disabled && destructive && "hover:bg-red-50 focus:ring-red-500"
-              )}
-            >
+            <button onClick={onClick} type={type} disabled={disabled} className={clsx(className, "btn-sm btn", destructive ? "btn-error" : "btn-secondary")}>
               {children}
             </button>
           );
         } else {
           return (
-            <Link
-              to={to}
-              target={target}
-              className={clsx(
-                className,
-                "inline-flex items-center space-x-2 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-sm focus:border-accent-300 focus:outline-none focus:ring-2",
-                disabled && "cursor-not-allowed opacity-75",
-                !destructive && "text-accent-700",
-                destructive && "text-red-700",
-                !disabled && !destructive && !className && "hover:border-accent-300 hover:text-accent-900 focus:ring-accent-500",
-                !disabled && destructive && "hover:bg-red-50 focus:ring-red-500"
+            <Fragment>
+              {to.startsWith("http") ? (
+                <a href={to} target={target} className={clsx(className, "btn-sm btn", destructive ? "btn-error" : "btn-secondary")}>
+                  {children}
+                </a>
+              ) : (
+                <Link reloadDocument to={to} className={clsx(className, "btn-sm btn", destructive ? "btn-error" : "btn-secondary")}>
+                  {children}
+                </Link>
               )}
-            >
-              {children}
-            </Link>
+            </Fragment>
           );
         }
       })()}

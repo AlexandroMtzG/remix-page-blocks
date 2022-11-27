@@ -3,7 +3,7 @@ import { FooterBlockDto, FooterBlockStyle } from "~/application/dtos/marketing/F
 
 export function defaultFooter({ t }: { t: TFunction }): FooterBlockDto {
   return {
-    style: FooterBlockStyle.simple,
+    style: FooterBlockStyle.columns,
     text: t("blocks.footer.text"),
     sections: [
       {
@@ -19,6 +19,7 @@ export function defaultFooter({ t }: { t: TFunction }): FooterBlockDto {
         items: [
           { name: t("blocks.footer.legal.privacy"), href: "/privacy-policy" },
           { name: t("blocks.footer.legal.terms"), href: "/terms-and-conditions" },
+          { name: t("blocks.footer.legal.components"), href: "/components" },
         ],
       },
     ],

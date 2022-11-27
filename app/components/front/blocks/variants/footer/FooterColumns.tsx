@@ -1,5 +1,4 @@
 import { Link } from "@remix-run/react";
-import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { FooterBlockDto } from "~/application/dtos/marketing/FooterBlockDto";
 import Icon from "~/components/front/Icon";
@@ -8,51 +7,54 @@ import Socials from "../socials/Socials";
 export default function FooterColumns({ item }: { item: FooterBlockDto }) {
   const { t } = useTranslation();
   return (
-    <footer aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8 xl:col-span-1">
-            <Icon className="h-10 w-auto" />
-            {item.text && <p className="text-base text-gray-500">{t(item.text)}</p>}
-            <div className="flex space-x-6">
+    <footer className="body-font text-gray-600">
+      <div className="container mx-auto flex flex-col flex-wrap px-5 py-24 md:flex-row md:flex-nowrap md:items-center lg:items-start">
+        <div className="mx-auto w-64 flex-shrink-0 text-center md:mx-0 md:text-left">
+          <Link to="/" className="title-font flex items-center justify-center font-medium text-gray-900 dark:text-white md:justify-start">
+            <Icon className="h-10" />
+          </Link>
+          {item.text && <p className="mt-2 text-sm text-gray-500">{t(item.text)}</p>}
+          {item.socials && (
+            <div className="mt-2 flex space-x-2">
               <Socials item={item.socials} />
             </div>
-          </div>
-          <div className="mt-12 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
-            {item.sections.map((section, idx) => {
-              return (
-                <div key={idx} className={clsx(idx > 0 && "mt-0")}>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">{section.name}</h3>
-                  <ul className="mt-4 space-y-4">
-                    {section.items.map((item) => (
-                      <li key={item.name}>
+          )}
+        </div>
+        <div className="-mb-10 mt-10 flex flex-grow flex-wrap text-center md:mt-0 md:pl-20 md:text-left">
+          {item.sections.map((section, idx) => {
+            return (
+              <div key={idx} className="w-full px-4 md:w-1/2 lg:w-1/4">
+                <h2 className="title-font mb-3 text-sm font-medium tracking-widest text-gray-900 dark:text-white">{t(section.name)}</h2>
+                <nav className="mb-10 list-none space-y-3">
+                  {section.items.map((item, idx) => {
+                    return (
+                      <li key={idx}>
                         {item.href.startsWith("http") ? (
-                          <a href={item.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white" target={item.target}>
+                          <a href={item.href} target={item.target} className="text-gray-600 hover:text-gray-800">
                             {t(item.name)}
                           </a>
                         ) : (
-                          <Link to={item.href} className="text-base text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <Link to={item.href} className="text-gray-600 hover:text-gray-800">
                             {t(item.name)}
                           </Link>
                         )}
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
+                    );
+                  })}
+                </nav>
+              </div>
+            );
+          })}
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
-          <p className="text-base text-gray-400 xl:text-center">{t("copyright")}</p>
-          <p className="text-base text-gray-400 xl:text-center">
-            <a href="https://saasrock.com/?ref=remix-page-blocks-footer" target="_blank" rel="noreferrer">
+      </div>
+      <div className="bg-gray-100">
+        <div className="container mx-auto flex flex-col flex-wrap py-4 px-5 sm:flex-row">
+          <div className="text-center text-sm text-gray-500 sm:text-left">
+            {t("copyright")} —
+            <a href="https://saasrock.com/?ref=remix-page-blocks-footer" rel="noopener noreferrer" className="ml-1 text-gray-600" target="_blank">
               Built with SaasRock.
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

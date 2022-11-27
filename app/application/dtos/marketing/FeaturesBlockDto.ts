@@ -3,6 +3,7 @@ export interface FeaturesBlockDto {
   headline: string;
   subheadline: string;
   topText?: string;
+  columns: number;
   items: {
     name: string;
     description: string;
@@ -15,6 +16,6 @@ export interface FeaturesBlockDto {
 }
 
 export enum FeaturesBlockStyle {
-  grid2x2 = "grid2x2",
   list = "list",
+  cards = "cards",
 }

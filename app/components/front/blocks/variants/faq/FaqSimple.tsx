@@ -1,56 +1,64 @@
-import { Disclosure } from "@headlessui/react";
 import { Link } from "@remix-run/react";
-import clsx from "clsx";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { FaqBlockDto } from "~/application/dtos/marketing/FaqBlockDto";
-import ChevronDownIcon from "~/components/icons/ChevronDownIcon";
 
+// https://tailblocks.cc/
+// Content: 1
 export default function FaqSimple({ item }: { item: FaqBlockDto }) {
   const { t } = useTranslation();
   return (
-    <div>
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200 dark:divide-gray-700">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Frequently asked questions</h2>
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200 dark:divide-gray-700">
-            {item.items.map((item, idx) => (
-              <Disclosure defaultOpen={idx === 0} as="div" key={item.question} className="pt-6">
-                {({ open }) => (
-                  <>
-                    <dt className="text-lg">
-                      <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
-                        <span className="font-medium text-gray-900 dark:text-white">{t(item.question)}</span>
-                        <span className="ml-6 flex h-7 items-center">
-                          <ChevronDownIcon className={clsx(open ? "-rotate-180" : "rotate-0", "h-6 w-6 transform")} aria-hidden="true" />
-                        </span>
-                      </Disclosure.Button>
-                    </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 space-y-1 pr-12">
-                      <p className="text-base text-gray-500 dark:text-gray-400">
-                        {t(item.answer)}{" "}
-                        {item.link && (
-                          <Fragment>
-                            {item.link.href.startsWith("http") ? (
-                              <a href={item.link.href} className="underline" target={item.link.target}>
-                                {t(item.link.text)}
-                              </a>
-                            ) : (
-                              <Link className="underline" to={item.link.href}>
-                                {t(item.link.text)}
-                              </Link>
-                            )}
-                          </Fragment>
-                        )}
-                      </p>
-                    </Disclosure.Panel>
-                  </>
+    <section className="body-font text-gray-600 dark:text-gray-400">
+      <div className="container mx-auto px-5 py-24">
+        <div className="mb-20 flex w-full flex-col text-center">
+          <h1 className="title-font mb-4 text-2xl font-medium text-gray-900 dark:text-white sm:text-3xl">FAQ</h1>
+        </div>
+        <div className="flex flex-wrap">
+          {item.items.map((item, idx) => {
+            return (
+              <div key={idx} className="border-l-2 border-gray-200 border-opacity-60 px-8 py-6 dark:border-gray-700 md:w-full lg:w-1/2">
+                <h2 className="title-font mb-2 text-lg font-medium text-gray-900 dark:text-white sm:text-xl">{t(item.question)}</h2>
+                <p className="mb-4 text-base leading-relaxed">{item.answer}</p>
+                {item.link?.href && (
+                  <Fragment>
+                    {item.link.href.startsWith("http") ? (
+                      <a href={item.link.href} target={item.link.target} className="inline-flex items-center text-theme-500">
+                        {t(item.link.text)}
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          className="ml-2 h-4 w-4"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    ) : (
+                      <Link to={item.link.href} className="inline-flex items-center text-theme-500">
+                        {t(item.link.text)}
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          className="ml-2 h-4 w-4"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </Link>
+                    )}
+                  </Fragment>
                 )}
-              </Disclosure>
-            ))}
-          </dl>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

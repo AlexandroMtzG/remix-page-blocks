@@ -25,7 +25,7 @@ export default function HeroBlockForm({ item, onUpdate }: { item?: HeroBlockDto;
           setValue={(value) => setState({ ...state, style: value as HeroBlockStyle })}
           options={[
             { value: HeroBlockStyle.simple, name: "Simple" },
-            { value: HeroBlockStyle.centered, name: "Centered" },
+            { value: HeroBlockStyle.image, name: "Image" },
           ]}
         />
       </InputGroup>
@@ -33,6 +33,7 @@ export default function HeroBlockForm({ item, onUpdate }: { item?: HeroBlockDto;
         <div className="space-y-2">
           <InputText title="Headline" type="text" value={state.headline} setValue={(e) => setState({ ...state, headline: e.toString() })} />
           <InputText title="Subheadline" type="text" value={state.subheadline} setValue={(e) => setState({ ...state, subheadline: e.toString() })} />
+          {state.style === "image" && <InputText title="Image" type="text" value={state.image} setValue={(e) => setState({ ...state, image: e.toString() })} />}
           <div className="grid grid-cols-3 gap-2">
             <InputText
               title="Top text"
