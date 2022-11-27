@@ -6,7 +6,12 @@ Remix and Tailwind CSS simple page block editor.
 
 ## Demo
 
-[https://remix-page-blocks.vercel.app/](https://remix-page-blocks.vercel.app/)
+- [Landing](https://remix-page-blocks.vercel.app/)
+- [Contact](https://remix-page-blocks.vercel.app/contact)
+- [Newsletter](https://remix-page-blocks.vercel.app/newsletter)
+- [Privacy Policy](https://remix-page-blocks.vercel.app/privacy-policy)
+- [Terms and Conditions](https://remix-page-blocks.vercel.app/terms-and-conditions)
+- [Components](https://remix-page-blocks.vercel.app/components)
 
 ## Video Demo
 
@@ -47,44 +52,78 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
     ...
 ```
 
-## Support
-
-If you like this project, [star it](https://github.com/AlexandroMtzG/remix-page-blocks) ⭐ or [sponsor it](https://github.com/sponsors/AlexandroMtzG) for more 😊.
-
-## More page blocks
-
-Check out [SaasRock](http://saasrock.com/?ref=remix-page-blocks-readme) - The One-Man SaaS Framework, all of these blocks are from SaasRock.
-
-## More open-source
-
-Check out my other open-source projects:
-
-- [RemixBlocks](https://github.com/AlexandroMtzG/remix-blocks)
-- [SaasFrontends](https://saasfrontends.com/)
-- [NetcoreSaas](https://netcoresaas.com/)
-
 ## Screenshots
 
 ### Landing Page
 
-![Landing Page](https://yahooder.sirv.com/remixblocks/page-blocks/landing.png)
+![Landing Page](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/hero-light.png)
 
 ### Contact Page
 
-![Contact Page](https://yahooder.sirv.com/remixblocks/page-blocks/contact.png)
+![Contact Page](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/contact.png)
 
 ### Newsletter Page
 
-![Newsletter Page](https://yahooder.sirv.com/remixblocks/page-blocks/newsletter.png)
+![Newsletter Page](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/newsletter.png)
 
 ### Dark Mode
 
-![Dark Mode](https://yahooder.sirv.com/remixblocks/page-blocks/dark-mode.png)
+![Dark Mode](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/hero-dark.png)
 
 ### Multi-Language
 
-![Multi-Language](https://yahooder.sirv.com/remixblocks/page-blocks/multi-language.png)
+![Multi-Language](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/multi-language.png)
 
 ### Multi-Theme
 
-![Multi-Theme](https://yahooder.sirv.com/remixblocks/page-blocks/multi-theme.png)
+![Multi-Theme](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/multi-theme.png)
+
+### Block Editor
+
+![Block Editor](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/block-editor.png)
+
+### Components
+
+![Components](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/components.png)
+
+## Blocks
+
+### Header
+
+![Header](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-header.png)
+
+### Hero - Simple
+
+![Hero - Simple](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-hero-simple.png)
+
+### Hero - With Image
+
+![Hero - with Image](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-hero-with-image.png)
+
+### Testimonials - Simple
+
+![Testimonials - Simple](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-testimonial-simple.png)
+
+### Features - List
+
+![Features - List](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-features-list.png)
+
+### Features - Cards
+
+![Features - Cards](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-features-cards.png)
+
+### Newsletter - Simple
+
+![Newsletter - Simple](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-newsletter.png)
+
+### Newsletter - with Rigth Form
+
+![Newsletter - with Rigth Form](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-newsletter-form.png)
+
+### FAQ
+
+![FAQ](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-faq.png)
+
+### Footer
+
+![Footer](https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/blocks/block-footer.png)

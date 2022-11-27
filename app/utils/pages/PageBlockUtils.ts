@@ -253,19 +253,15 @@ const defaultBlocks: PageBlockDto = {
     items: [
       {
         name: "Remix",
-        description: "Focused on web standards and modern web app UX, you’re simply going to build better websites.",
+        description: "Focused on web standards and modern web app UX.",
       },
       {
-        name: "React",
+        name: "React & TypeScript",
         description: "A JavaScript library for building user interfaces.",
       },
       {
         name: "Tailwind CSS",
-        description: "Rapidly build modern websites without ever leaving your HTML. The best utility-first CSS framework.",
-      },
-      {
-        name: "TypeScript",
-        description: "Typed superset of JavaScript for writing better code.",
+        description: "Rapidly build modern websites without ever leaving your HTML.",
       },
     ],
   },
@@ -288,17 +284,7 @@ const defaultBlocks: PageBlockDto = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
       },
       {
-        question: "Question 4?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      },
-      {
-        question: "Question 5?",
-        answer:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      },
-      {
-        question: "Question 6 with link?",
+        question: "Question 4 with link?",
         answer:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         link: {

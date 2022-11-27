@@ -112,27 +112,35 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
         images: [
           {
             title: "Landing Page",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/landing.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/hero-light.png",
           },
           {
             title: "Contact Page",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/contact.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/contact.png",
           },
           {
             title: "Newsletter Page",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/newsletter.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/newsletter.png",
           },
           {
             title: "Dark Mode",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/dark-mode.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/hero-dark.png",
           },
           {
             title: "Multi-Language",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/multi-language.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/multi-language.png",
           },
           {
             title: "Multi-Theme",
-            src: "https://yahooder.sirv.com/remixblocks/page-blocks/multi-theme.png",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/multi-theme.png",
+          },
+          {
+            title: "Block Editor",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/block-editor.png",
+          },
+          {
+            title: "Components",
+            src: "https://yahooder.sirv.com/remixblocks/page-blocks/remix-page-blocks/components.png",
           },
         ],
       },
