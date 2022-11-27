@@ -110,6 +110,10 @@
     "newsletter": {
       "headline": "Suscríbete a nuestro newsletter para obtener actualizaciones",
       "subheadline": "Enviamos actualizaciones de producto, features en construcción, promociones, tutoriales, y más."
+    },
+    "faq": {
+      "headline": "FAQ",
+      "subheadline": "Preguntas frecuentes"
     }
   },
   "contact": {
@@ -130,7 +134,7 @@
     "subheadline": "Suscríbete al newsletter para recibir actualizaciones",
     "subscribe": "Suscribirse",
     "subscribing": "Suscribiendo",
-    "subscribed": "Gracias por suscribirte",
+    "subscribed": "¡Gracias por suscribirte!",
     "weCare": "Nos importa la protección de tu privacidad.",
     "form": {
       "firstName": "Nombre",

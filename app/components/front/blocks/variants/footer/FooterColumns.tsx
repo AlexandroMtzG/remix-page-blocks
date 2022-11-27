@@ -10,12 +10,12 @@ export default function FooterColumns({ item }: { item: FooterBlockDto }) {
     <footer className="body-font text-gray-600">
       <div className="container mx-auto flex flex-col flex-wrap px-5 py-24 md:flex-row md:flex-nowrap md:items-center lg:items-start">
         <div className="mx-auto w-64 flex-shrink-0 text-center md:mx-0 md:text-left">
-          <Link to="/" className="title-font flex items-center justify-center font-medium text-gray-900 dark:text-white md:justify-start">
+          <div className="title-font flex items-center justify-center font-medium text-gray-900 dark:text-white md:justify-start">
             <Icon className="h-10" />
-          </Link>
-          {item.text && <p className="mt-2 text-sm text-gray-500">{t(item.text)}</p>}
+          </div>
+          {item.text && <p className="mt-2 hidden text-sm text-gray-500 md:block">{t(item.text)}</p>}
           {item.socials && (
-            <div className="mt-2 flex space-x-2">
+            <div className="mx-auto mt-2 flex justify-center space-x-2 md:justify-start">
               <Socials item={item.socials} />
             </div>
           )}
@@ -47,7 +47,7 @@ export default function FooterColumns({ item }: { item: FooterBlockDto }) {
           })}
         </div>
       </div>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 dark:bg-gray-800">
         <div className="container mx-auto flex flex-col flex-wrap py-4 px-5 sm:flex-row">
           <div className="text-center text-sm text-gray-500 sm:text-left">
             {t("copyright")} —

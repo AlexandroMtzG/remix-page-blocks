@@ -1,5 +1,7 @@
 export interface FaqBlockDto {
   style: FaqBlockStyle | string;
+  headline?: string;
+  subheadline?: string;
   items: {
     question: string;
     answer: string;

@@ -15,8 +15,6 @@ import InputNumber from "~/components/ui/InputNumber";
 import InputCheckbox from "~/components/ui/InputCheckbox";
 import InputCheckboxWithDescription from "~/components/ui/InputCheckboxWithDescription";
 import { useState } from "react";
-import OpenSuccessModal from "~/components/ui/OpenSuccessModal";
-import OpenErrorModal from "~/components/ui/OpenErrorModal";
 import HeroDefault from "~/components/front/blocks/variants/hero/HeroDefault";
 import HeroWithImage from "~/components/front/blocks/variants/hero/HeroWithImage";
 import TestimonialsSimple from "~/components/front/blocks/variants/testimonials/TestimonialsSimple";
@@ -26,6 +24,7 @@ import NewsletterSimple from "~/components/front/blocks/variants/newsletter/News
 import NewsletterRightForm from "~/components/front/blocks/variants/newsletter/NewsletterRightForm";
 import FaqSimple from "~/components/front/blocks/variants/faq/FaqSimple";
 import FooterColumns from "~/components/front/blocks/variants/footer/FooterColumns";
+import OpenModal from "~/components/ui/OpenModal";
 
 type LoaderData = {
   title: string;
@@ -116,20 +115,8 @@ export default function Components() {
               Error
             </ButtonPrimary>
           </div>
-          <OpenSuccessModal
-            title={success?.title}
-            description={success?.description}
-            closeText={success?.closeText}
-            open={success !== undefined}
-            onClose={() => setSuccess(undefined)}
-          />
-          <OpenErrorModal
-            title={error?.title}
-            description={error?.description}
-            closeText={error?.closeText}
-            open={error !== undefined}
-            onClose={() => setError(undefined)}
-          />
+          <OpenModal type="success" {...success} closeText={success?.closeText} open={success !== undefined} onClose={() => setSuccess(undefined)} />
+          <OpenModal type="error" {...error} open={error !== undefined} onClose={() => setError(undefined)} />
         </div>
 
         <div className="space-y-2 rounded-md border-2 border-dashed border-gray-800 p-2">

@@ -3,8 +3,7 @@ import { useState } from "react";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
 import ButtonSecondary from "~/components/ui/ButtonSecondary";
 import Modal from "~/components/ui/Modal";
-import OpenErrorModal from "~/components/ui/OpenErrorModal";
-import OpenSuccessModal from "~/components/ui/OpenSuccessModal";
+import OpenModal from "~/components/ui/OpenModal";
 import PageBlockUtils from "~/utils/pages/PageBlockUtils";
 import TemplateEditor from "./TemplateEditor";
 
@@ -96,14 +95,9 @@ export default function PageBlockEditMode({ items, onSetBlocks }: { items: PageB
         </div>
       )}
 
-      <OpenSuccessModal
-        title={message?.success?.title}
-        description={message?.success?.message}
-        open={!!message?.success}
-        onClose={() => setMessage(undefined)}
-      />
+      <OpenModal type="success" {...message?.success} open={!!message?.success} onClose={() => setMessage(undefined)} />
 
-      <OpenErrorModal title={message?.error?.message} open={!!message?.error} onClose={() => setMessage(undefined)} />
+      <OpenModal type="error" {...message?.error} open={!!message?.error} onClose={() => setMessage(undefined)} />
 
       <Modal open={settingTemplate} setOpen={setSettingTemplate}>
         <div>

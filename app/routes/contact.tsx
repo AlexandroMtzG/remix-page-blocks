@@ -57,7 +57,7 @@ export default function ContactRoute() {
                         name="first_name"
                         id="first_name"
                         autoComplete="given-name"
-                        className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                        className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                       />
                     </div>
                   </div>
@@ -72,7 +72,7 @@ export default function ContactRoute() {
                         name="last_name"
                         id="last_name"
                         autoComplete="family-name"
-                        className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                        className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                       />
                     </div>
                   </div>
@@ -88,7 +88,7 @@ export default function ContactRoute() {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                        className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                       />
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ContactRoute() {
                         name="company"
                         id="company"
                         autoComplete="organization"
-                        className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                        className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                       />
                     </div>
                   </div>
@@ -122,7 +122,7 @@ export default function ContactRoute() {
                         name="jobTitle"
                         id="organization-title"
                         autoComplete="organization-title"
-                        className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                        className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                       />
                     </div>
                   </div>
@@ -141,7 +141,7 @@ export default function ContactRoute() {
                         name="comments"
                         aria-describedby="comments_description"
                         rows={3}
-                        className="textarea-bordered textarea w-full bg-gray-50 dark:text-gray-800"
+                        className="textarea-bordered textarea w-full bg-gray-50 dark:bg-gray-800"
                       ></textarea>
                     </div>
                   </div>

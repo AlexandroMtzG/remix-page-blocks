@@ -74,16 +74,16 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
               })}
             </Dropdown.Menu>
           </Dropdown>
-          <Link to="/" className="btn-ghost btn text-xl normal-case">
+          <div className="btn-ghost btn text-xl normal-case">
             {item.withLogo ? (
               <>
-                <Logo className="hidden lg:block" size="h-9" />
-                <Icon className="lg:hidden" size="h-9" />
+                <Logo className="hidden md:block" size="h-9" />
+                <Icon className="md:hidden" size="h-9" />
               </>
             ) : (
               <div></div>
             )}
-          </Link>
+          </div>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
           <Menu horizontal className="flex items-center p-0">

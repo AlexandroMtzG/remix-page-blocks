@@ -272,13 +272,35 @@ const defaultBlocks: PageBlockDto = {
   faq: {
     style: FaqBlockStyle.simple,
     items: [
-      { question: "Question 1?", answer: "Answer 1." },
-      { question: "Question 2?", answer: "Answer 2." },
-      { question: "Question 3?", answer: "Answer 3." },
-      { question: "Question 4?", answer: "Answer 4." },
       {
-        question: "Question 5 with link?",
-        answer: "Answer 5 with link.",
+        question: "Question 1?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      },
+      {
+        question: "Question 2?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      },
+      {
+        question: "Question 3?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      },
+      {
+        question: "Question 4?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      },
+      {
+        question: "Question 5?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      },
+      {
+        question: "Question 6 with link?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         link: {
           text: "Visit my other boilerplates",
           href: "https://alexandromg.gumroad.com/?ref=remix-page-blocks-faq",

@@ -23,7 +23,7 @@ export default function HeroWithImage({ item }: { item: HeroBlockDto }) {
               </span>
             )}
           </div>
-          <h1 className="title-font mb-4 text-3xl font-medium text-gray-900 sm:text-4xl">{t(item.headline)}</h1>
+          <h1 className="title-font mb-4 text-3xl font-medium text-gray-900 dark:text-white sm:text-4xl">{t(item.headline)}</h1>
           <p className="mb-8 leading-relaxed">{t(item.subheadline)}</p>
           <div className="flex justify-center space-x-4">
             {item.cta.map((item, idx) => {

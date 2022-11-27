@@ -110,6 +110,10 @@
     "newsletter": {
       "headline": "Subscribe to our newsletter to get the latest updates",
       "subheadline": "We send product updates, upcoming features, promotions, tutorials, and more."
+    },
+    "faq": {
+      "headline": "FAQ",
+      "subheadline": "Frequently asked questions"
     }
   },
   "contact": {
@@ -130,7 +134,7 @@
     "subheadline": "Subscribe to the newsletter to get product updates",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing",
-    "subscribed": "Subscribed",
+    "subscribed": "Thank you for subscribing!",
     "weCare": "We care about the protection of your data.",
     "form": {
       "firstName": "First Name",

@@ -26,6 +26,13 @@ export default function FaqBlockForm({ item, onUpdate }: { item?: FaqBlockDto; o
         />
       </InputGroup>
 
+      <InputGroup title="Copy">
+        <div className="space-y-2">
+          <InputText title="Headline" type="text" value={state.headline} setValue={(e) => setState({ ...state, headline: e.toString() })} />
+          <InputText title="Subheadline" type="text" value={state.subheadline} setValue={(e) => setState({ ...state, subheadline: e.toString() })} />
+        </div>
+      </InputGroup>
+
       <InputGroup title="Questions">
         <div className="flex flex-col space-y-2">
           {state.items.map((item, index) => (

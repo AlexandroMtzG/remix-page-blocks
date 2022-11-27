@@ -7,8 +7,7 @@ import { Language } from "remix-i18next";
 import Footer from "~/components/front/Footer";
 import Header from "~/components/front/Header";
 import { i18nHelper } from "~/locale/i18n.utils";
-import OpenSuccessModal from "~/components/ui/OpenSuccessModal";
-import OpenErrorModal from "~/components/ui/OpenErrorModal";
+import OpenModal from "~/components/ui/OpenModal";
 
 type LoaderData = {
   title: string;
@@ -120,7 +119,7 @@ export default function NewsletterRoute() {
                       name="first_name"
                       id="first_name"
                       autoComplete="given-name"
-                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                      className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                     />
                   </div>
                 </div>
@@ -135,7 +134,7 @@ export default function NewsletterRoute() {
                       name="last_name"
                       id="last_name"
                       autoComplete="family-name"
-                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                      className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                     />
                   </div>
                 </div>
@@ -153,7 +152,7 @@ export default function NewsletterRoute() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="input-bordered input w-full bg-gray-50 dark:text-gray-800"
+                      className="input-bordered input w-full bg-gray-50 dark:bg-gray-800"
                     />
                   </div>
                 </div>
@@ -181,8 +180,8 @@ export default function NewsletterRoute() {
         <Footer></Footer>
       </div>
 
-      <OpenSuccessModal title={actionResult?.success?.toString() ?? ""} open={!!actionResult?.success} onClose={() => setActionResult(undefined)} />
-      <OpenErrorModal title={actionResult?.error?.toString() ?? ""} open={!!actionResult?.error} onClose={() => setActionResult(undefined)} />
+      <OpenModal type="success" title={actionResult?.success?.toString() ?? ""} open={!!actionResult?.success} onClose={() => setActionResult(undefined)} />
+      <OpenModal type="error" title={actionResult?.error?.toString() ?? ""} open={!!actionResult?.error} onClose={() => setActionResult(undefined)} />
     </div>
   );
 }
