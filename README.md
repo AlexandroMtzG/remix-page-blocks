@@ -14,6 +14,8 @@ https://www.loom.com/share/eccf927d35cd4ad3b4a1d512257cea53
 
 ## How to use?
 
+💿 Rename `.env.example` to `.env` and set your variables.
+
 💿 Install all the dependencies.
 
 ```
