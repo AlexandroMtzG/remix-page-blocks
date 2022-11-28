@@ -19,6 +19,7 @@ export default function VideoSimple({ item }: { item: VideoBlockDto }) {
               src={item.src}
               title={item.headline}
               frameBorder="0"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
