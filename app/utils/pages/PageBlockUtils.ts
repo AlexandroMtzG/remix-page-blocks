@@ -106,10 +106,6 @@ const defaultBlocks: PageBlockDto = {
       { path: "/", title: "blocks.header.product" },
       { path: "/contact", title: "blocks.header.contact" },
       { path: "/newsletter", title: "blocks.header.newsletter" },
-      {
-        title: "About",
-        items: [{ path: "/blog", title: "Blog" }],
-      },
     ],
   },
   footer: {
