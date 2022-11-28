@@ -16,7 +16,7 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
     return location.pathname === path;
   }
   return (
-    <div className="component-preview flex w-full items-center justify-center gap-2 p-4 font-sans">
+    <nav className="component-preview flex w-full items-center justify-center gap-2 p-4 font-sans">
       <Navbar>
         <Navbar.Start>
           <Dropdown>
@@ -170,6 +170,6 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
           )}
         </Navbar.End>
       </Navbar>
-    </div>
+    </nav>
   );
 }
