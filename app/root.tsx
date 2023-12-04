@@ -1,6 +1,6 @@
 import { ActionFunction, LinksFunction, LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "@remix-run/react";
-import styles from "./styles/app.css";
+import styles from "./tailwind.css";
 import { useChangeLanguage } from "remix-i18next";
 import { createUserSession, getUserInfo } from "./utils/session.server";
 import { loadRootData, useRootData } from "./utils/data/useRootData";
@@ -9,7 +9,7 @@ import FloatingLoader from "./components/transitions/FloatingLoader";
 import ServerError from "./components/ui/ServerError";
 import { useTranslation } from "react-i18next";
 
-export let links: LinksFunction = () => {
+export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
