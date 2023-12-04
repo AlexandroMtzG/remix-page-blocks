@@ -6,7 +6,7 @@ Remix and Tailwind CSS simple page block editor.
 
 - ⭐ Remix v2 + React v18
 - ⭐ Dockerfile: [Demo](https://remix-page-blocks.fly.dev/) is now hosted on [Fly.io](https://fly.io/)
-- ❌ [Vercel demo](https://remix-page-blocks.vercel.app/): Translations take a second to load. I still don't know how to implement `i18n-fetch-backend` with Vercel.
+- ❌ [Vercel demo](https://remix-page-blocks.vercel.app/): Translations take a second to load. I still don't know how to implement `i18n-fetch-backend` for Vercel.
 
 ## Demo
 
@@ -156,4 +156,4 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
 
 **Result:**
 
-![Landing Page](https://private-user-images.githubusercontent.com/8606530/287595160-ed1020f1-c434-4326-bf18-87b9088f041b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE2NjYzMzcsIm5iZiI6MTcwMTY2NjAzNywicGF0aCI6Ii84NjA2NTMwLzI4NzU5NTE2MC1lZDEwMjBmMS1jNDM0LTQzMjYtYmYxOC04N2I5MDg4ZjA0MWIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTIwNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzEyMDRUMDUwMDM3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjBiMzJmYTk5ZDUzYzZjYjBhMjVkOGEzOGM3MDA1MDEyZTZjYzk0Y2I1YzdkYzFmNTFmZGFlOGIyYWEwOTQ0ZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.bbQXVuqXKSxDzghd_raYOoSthLMpqARiFIHzrqezKvM)
+![Landing Page](https://yahooder.sirv.com/remix-page-blocks/hero.png)
