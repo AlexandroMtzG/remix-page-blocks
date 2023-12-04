@@ -32,24 +32,24 @@ export default function FeaturesList({ item }: { item: FeaturesBlockDto }) {
                   item.columns === 8 && "lg:w-1/8 w-full"
                 )}
               >
-                <div className="mb-4 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-theme-100 text-theme-500 dark:bg-theme-800">
+                <div className="bg-theme-100 text-theme-500 dark:bg-theme-800 mb-4 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full">
                   {feature.img ? (
                     <>
                       {feature.img.startsWith("<svg") ? (
                         <div dangerouslySetInnerHTML={{ __html: feature.img.replace("<svg", `<svg class='${" h-6 w-6 text-theme-500"}'`) ?? "" }} />
                       ) : (
-                        <img className=" h-6 w-6 text-theme-500" src={feature.img} alt={feature.name} />
+                        <img className=" text-theme-500 h-6 w-6" src={feature.img} alt={feature.name} />
                       )}
                     </>
                   ) : (
-                    <CheckIcon className=" h-6 w-6 text-theme-500" aria-hidden="true" />
+                    <CheckIcon className=" text-theme-500 h-6 w-6" aria-hidden="true" />
                   )}
                 </div>
                 <div className="flex-grow pl-6">
                   <p className="title-font mb-2 text-lg font-medium text-gray-900 dark:text-white">{t(feature.name)}</p>
                   <p className="text-base leading-relaxed">{t(feature.description)}</p>
                   {feature.link?.href && (
-                    <a href={feature.link?.href} className="mt-3 inline-flex items-center text-theme-500">
+                    <a href={feature.link?.href} className="text-theme-500 mt-3 inline-flex items-center">
                       {t(feature.link.text)}
                       <svg
                         fill="none"

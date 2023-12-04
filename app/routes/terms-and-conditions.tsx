@@ -4,7 +4,7 @@ import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { i18nHelper } from "~/locale/i18n.utils";
 import Footer from "~/components/front/Footer";
 
-export let loader: LoaderFunction = async ({ request }) => {
+export const loader: LoaderFunction = async ({ request }) => {
   let { t, translations } = await i18nHelper(request);
   return json({
     title: `${t("terms.headline")} | ${process.env.APP_NAME}`,
@@ -12,9 +12,7 @@ export let loader: LoaderFunction = async ({ request }) => {
   });
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  title: data?.title,
-});
+export const meta: MetaFunction<typeof loader> = ({ data }) => [{ title: data?.title }];
 
 export default function TermsAndConditionsRoute() {
   const { t } = useTranslation();

@@ -2,30 +2,30 @@ import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ActionFunction, json, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { Form, useActionData, useTransition } from "@remix-run/react";
-import { Language } from "remix-i18next";
+import { Form, useNavigation } from "@remix-run/react";
 import Footer from "~/components/front/Footer";
 import Header from "~/components/front/Header";
 import { i18nHelper } from "~/locale/i18n.utils";
 import OpenModal from "~/components/ui/OpenModal";
+import { useTypedActionData } from "remix-typedjson";
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => [{ title: data?.title }];
 
 type LoaderData = {
   title: string;
-  i18n: Record<string, Language>;
 };
-export let loader: LoaderFunction = async ({ request }) => {
-  let { t, translations } = await i18nHelper(request);
+export const loader: LoaderFunction = async ({ request }) => {
+  let { t } = await i18nHelper(request);
   const data: LoaderData = {
     title: `${t("newsletter.headline")} | ${process.env.APP_NAME}`,
-    i18n: translations,
   };
   return json(data);
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  title: data?.title,
-});
-
+type ActionData = {
+  error?: string;
+  success?: string;
+};
 export const action: ActionFunction = async ({ request }) => {
   const { t } = await i18nHelper(request);
   await new Promise((res) => setTimeout(res, 1000));
@@ -68,16 +68,11 @@ export const action: ActionFunction = async ({ request }) => {
 
 export default function NewsletterRoute() {
   const { t } = useTranslation();
-  const actionData = useActionData();
-  const transition = useTransition();
-  const isSubscribing = transition.state === "submitting" && transition.submission.formData.get("action") === "subscribe";
-  const state: "idle" | "success" | "error" | "submitting" = transition.submission
-    ? "submitting"
-    : actionData?.subscription
-    ? "success"
-    : actionData?.error
-    ? "error"
-    : "idle";
+  const actionData = useTypedActionData<ActionData>();
+  const navigation = useNavigation();
+  const isSubscribing = navigation.state === "submitting" && navigation.formData?.get("action") === "subscribe";
+  const state: "idle" | "success" | "error" | "submitting" =
+    navigation.state === "submitting" ? "submitting" : actionData?.success ? "success" : actionData?.error ? "error" : "idle";
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -87,7 +82,7 @@ export default function NewsletterRoute() {
     }
   }, [actionData?.success, isSubscribing]);
 
-  const [actionResult, setActionResult] = useState<{ error?: string; success?: string }>();
+  const [actionResult, setActionResult] = useState<{ error?: string; success?: string } | null>(null);
 
   useEffect(() => {
     setActionResult(actionData);
@@ -164,7 +159,7 @@ export default function NewsletterRoute() {
                         <p>{t("newsletter.checkEmail")}</p>
                       </div>
                     ) : state === "error" ? (
-                      <p>{actionData.message}</p>
+                      <p>{actionData?.error}</p>
                     ) : (
                       <div></div>
                     )}
@@ -180,8 +175,8 @@ export default function NewsletterRoute() {
         <Footer></Footer>
       </div>
 
-      <OpenModal type="success" title={actionResult?.success?.toString() ?? ""} open={!!actionResult?.success} onClose={() => setActionResult(undefined)} />
-      <OpenModal type="error" title={actionResult?.error?.toString() ?? ""} open={!!actionResult?.error} onClose={() => setActionResult(undefined)} />
+      <OpenModal type="success" title={actionResult?.success?.toString() ?? ""} open={!!actionResult?.success} onClose={() => setActionResult(null)} />
+      <OpenModal type="error" title={actionResult?.error?.toString() ?? ""} open={!!actionResult?.error} onClose={() => setActionResult(null)} />
     </div>
   );
 }

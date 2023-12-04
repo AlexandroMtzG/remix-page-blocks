@@ -1,10 +1,10 @@
 import { getUserInfo } from "~/utils/session.server";
-import { i18n } from "./i18n.server";
+import { remixI18Next } from "./v2/i18next.server";
 
 export async function i18nHelper(request: Request) {
   const userInfo = await getUserInfo(request);
   const lng = userInfo.lng;
-  const t = await i18n.getFixedT(lng ?? request, "translations");
-  const translations = await i18n.getTranslations(lng ?? request, ["translations"]);
+  const t = await remixI18Next.getFixedT(lng ?? request, "translations");
+  let translations: any = {};
   return { t, translations };
 }

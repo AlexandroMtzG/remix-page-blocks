@@ -19,7 +19,7 @@ export default function InputGroup({ title, description, icon, children, classNa
         </div>
       </h3>
       <p className="mt-1 text-sm text-gray-500">{description}</p>
-      <div className="rounded-md border border-gray-100 bg-white py-5 px-4 shadow">{children}</div>
+      <div className="rounded-md border border-gray-100 bg-white px-4 py-5 shadow">{children}</div>
     </div>
   );
 }

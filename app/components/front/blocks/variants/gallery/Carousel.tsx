@@ -49,11 +49,11 @@ export default function Carousel({ images }: Props) {
         </div>
       </div>
       <div className="relative block w-full overflow-hidden rounded-lg border-4 border-dotted border-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-0 lg:h-[32rem]">
-        <div className="absolute top-0 mt-3 ml-2">
+        <div className="absolute top-0 ml-2 mt-3">
           <button
             onClick={previousImage}
             type="button"
-            className="absolute rounded-full border border-gray-500 bg-gray-900 p-2 text-gray-300 opacity-90 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-theme-600 focus:ring-offset-0"
+            className="focus:ring-theme-600 absolute rounded-full border border-gray-500 bg-gray-900 p-2 text-gray-300 opacity-90 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-0"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -65,7 +65,7 @@ export default function Carousel({ images }: Props) {
           <button
             onClick={nextImage}
             type="button"
-            className="absolute rounded-full border border-gray-500 bg-gray-900 p-2 text-gray-300 opacity-90 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-theme-600 focus:ring-offset-0"
+            className="focus:ring-theme-600 absolute rounded-full border border-gray-500 bg-gray-900 p-2 text-gray-300 opacity-90 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-0"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

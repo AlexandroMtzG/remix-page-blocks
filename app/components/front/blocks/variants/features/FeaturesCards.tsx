@@ -35,7 +35,7 @@ export default function FeaturesCards({ item }: { item: FeaturesBlockDto }) {
               >
                 <div className="flex h-full flex-col rounded-lg bg-gray-100 p-8 dark:bg-gray-800">
                   <div className="mb-3 flex items-center">
-                    <div className="mr-3 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-indigo-500 text-white">
+                    <div className="bg-theme-500 mr-3 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-white">
                       {feature.img ? (
                         <>
                           {feature.img.startsWith("<svg") ? (
@@ -53,7 +53,7 @@ export default function FeaturesCards({ item }: { item: FeaturesBlockDto }) {
                   <div className="flex-grow">
                     <p className="text-base leading-relaxed">{t(feature.description)}</p>
                     {feature.link?.href && (
-                      <a href={feature.link?.href} className="mt-3 inline-flex items-center text-indigo-500">
+                      <a href={feature.link?.href} className="text-theme-500 mt-3 inline-flex items-center">
                         {t(feature.link.text)}
                         <svg
                           fill="none"

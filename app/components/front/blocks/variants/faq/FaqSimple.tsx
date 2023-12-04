@@ -25,7 +25,7 @@ export default function FaqSimple({ item }: { item: FaqBlockDto }) {
                 {item.link?.href && (
                   <Fragment>
                     {item.link.href.startsWith("http") ? (
-                      <a href={item.link.href} target={item.link.target} className="inline-flex items-center text-theme-500">
+                      <a href={item.link.href} target={item.link.target} className="text-theme-500 inline-flex items-center">
                         {t(item.link.text)}
                         <svg
                           fill="none"
@@ -40,7 +40,7 @@ export default function FaqSimple({ item }: { item: FaqBlockDto }) {
                         </svg>
                       </a>
                     ) : (
-                      <Link to={item.link.href} className="inline-flex items-center text-theme-500">
+                      <Link to={item.link.href} className="text-theme-500 inline-flex items-center">
                         {t(item.link.text)}
                         <svg
                           fill="none"

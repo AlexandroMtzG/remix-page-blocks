@@ -15,7 +15,7 @@ export default function Modal({ className, children, open, setOpen }: Props) {
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="fixed inset-0 z-20 overflow-y-auto" onClose={onClose}>
-        <div className="flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -44,7 +44,7 @@ export default function Modal({ className, children, open, setOpen }: Props) {
             <div
               className={clsx(
                 className,
-                "relative inline-block transform overflow-visible rounded-lg bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-3xl sm:p-6 sm:align-middle"
+                "relative inline-block transform overflow-visible rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-3xl sm:p-6 sm:align-middle"
               )}
             >
               {children}

@@ -15,7 +15,7 @@ export default function HeroDefault({ item }: { item: HeroBlockDto }) {
               <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
                 {t(item.topText.text ?? "")}{" "}
                 {item.topText.link && (
-                  <Link to={item.topText.link.href ?? ""} className="font-semibold text-theme-600">
+                  <Link to={item.topText.link.href ?? ""} className="text-theme-600 font-semibold">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {t(item.topText.link.text ?? "")} <span aria-hidden="true">&rarr;</span>
                   </Link>
@@ -63,14 +63,14 @@ export default function HeroDefault({ item }: { item: HeroBlockDto }) {
                       <a
                         href={item.bottomText.link.href ?? ""}
                         target={item.bottomText.link.target}
-                        className="border-b border-dashed border-accent-500 text-sm italic text-gray-500 hover:border-dotted dark:border-cyan-300"
+                        className="border-accent-500 border-b border-dashed text-sm italic text-gray-500 hover:border-dotted dark:border-cyan-300"
                       >
                         {t(item.bottomText.link.text ?? "")}
                       </a>
                     ) : (
                       <Link
                         to={item.bottomText.link.href ?? ""}
-                        className="border-b border-dashed border-accent-500 text-sm italic text-gray-500 hover:border-dotted dark:border-cyan-300"
+                        className="border-accent-500 border-b border-dashed text-sm italic text-gray-500 hover:border-dotted dark:border-cyan-300"
                       >
                         {t(item.bottomText.link.text ?? "")}
                       </Link>

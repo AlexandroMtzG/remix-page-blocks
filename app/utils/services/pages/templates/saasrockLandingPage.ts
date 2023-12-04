@@ -698,7 +698,7 @@ export function saasrockLandingPage() {
             question: "What is a developer license?",
             answer:
               "A developer license is a license for a developer to use SaasRock for their own SaaS app development. If you need a license for your team, buy all the licenses you need.",
-            link: { text: "shared.readMore", href: "https://saasrock.com/docs/license" },
+            link: { text: "shared.learnMore", href: "https://saasrock.com/docs/license" },
           },
         ],
       },

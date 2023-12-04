@@ -20,7 +20,7 @@ export default function Dropdown({ button, options, right, onClick, className, b
           onClick={onClick}
           className={
             btnClassName ??
-            "inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-theme-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+            "focus:ring-theme-500 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100"
           }
         >
           {button}

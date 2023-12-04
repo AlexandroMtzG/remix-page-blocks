@@ -22,7 +22,7 @@
       "product": "Product",
       "contact": "Contact",
       "newsletter": "Newsletter",
-      "more": "More from me"
+      "more": "More like this"
     },
     "footer": {
       "text": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
@@ -40,15 +40,15 @@
       }
     },
     "banner": {
-      "text": "Welcome to Remix Page Blocks 👋! Built by SaasRock.",
+      "text": "Upgraded to Remix v2 + React 18 ✨",
       "cta": {
-        "learnMore": "Learn more"
+        "learnMore": "Meet saasrock"
       }
     },
     "hero": {
       "headline": "Remix Page Blocks",
       "subheadline": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
-      "topText": "Remix 1.6.3 - Tailwind CSS 3.1.2 - DaisyUI 2.4.6",
+      "topText": "Remix 2.3.1 ✨ Tailwind CSS 3.3.5 💅 DaisyUI 2.42.1",
       "cta": {
         "primary": "View on Github",
         "secondary": "Built by SaasRock"
@@ -134,7 +134,7 @@
     "subheadline": "Subscribe to the newsletter to get product updates",
     "subscribe": "Subscribe",
     "subscribing": "Subscribing",
-    "subscribed": "Thank you for subscribing!",
+    "subscribed": "Thank you for subscribing! Check your inbox to confirm your subscription (and the SPAM folder too).",
     "weCare": "We care about the protection of your data.",
     "form": {
       "firstName": "First Name",
