@@ -13,7 +13,7 @@ interface Props {
 }
 export default function InputCheckboxWithDescription({ name, title, value, setValue, description, className, help, disabled = false }: Props) {
   return (
-    <div className={clsx("relative flex items-start pt-2 pb-4", className)}>
+    <div className={clsx("relative flex items-start pb-4 pt-2", className)}>
       <div className="min-w-0 flex-1 text-sm">
         <label htmlFor={name} className="cursor-pointer select-none">
           <div className="font-medium text-gray-700">{title}</div>

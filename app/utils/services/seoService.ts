@@ -14,26 +14,28 @@ async function getSeoMetaTagsFromPathname(pathname: string) {
   const twitterCreator = "@AlexandroMtzG";
   const twitterSite = "@saas_rock";
 
-  const metaTags: MetaTagsDto = {
-    charset: "utf-8",
-    title,
-    description,
-    keywords,
-    "og:title": title,
-    "og:type": "website",
-    "og:url": pathname,
-    "og:image": image,
-    "og:card": "summary_large_image",
-    "og:creator": twitterCreator,
-    // "og:site": request ? new URL(request.url).host : "",
-    "og:description": description,
-    "twitter:image": twitterImage,
-    "twitter:card": "summary_large_image",
-    "twitter:creator": twitterCreator,
-    "twitter:site": twitterSite,
-    "twitter:title": title,
-    "twitter:description": description,
-  };
+  const metaTags: MetaTagsDto = [
+    {
+      charset: "utf-8",
+      title,
+      description,
+      keywords,
+      "og:title": title,
+      "og:type": "website",
+      "og:url": pathname,
+      "og:image": image,
+      "og:card": "summary_large_image",
+      "og:creator": twitterCreator,
+      // "og:site": request ? new URL(request.url).host : "",
+      "og:description": description,
+      "twitter:image": twitterImage,
+      "twitter:card": "summary_large_image",
+      "twitter:creator": twitterCreator,
+      "twitter:site": twitterSite,
+      "twitter:title": title,
+      "twitter:description": description,
+    },
+  ];
 
   return metaTags;
 }

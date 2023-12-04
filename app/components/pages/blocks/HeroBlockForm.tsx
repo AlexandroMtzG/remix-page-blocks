@@ -87,7 +87,7 @@ export default function HeroBlockForm({ item, onUpdate }: { item?: HeroBlockDto;
                   setState({ ...state, cta });
                 }}
                 type="button"
-                className="absolute top-0 right-0 -mt-3 hidden origin-top-right justify-center rounded-full bg-white text-gray-600 hover:text-red-500 group-hover:flex"
+                className="absolute right-0 top-0 -mt-3 hidden origin-top-right justify-center rounded-full bg-white text-gray-600 hover:text-red-500 group-hover:flex"
               >
                 <XIcon className="h-6 w-6" />
               </button>

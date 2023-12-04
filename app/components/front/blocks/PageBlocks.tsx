@@ -126,7 +126,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
                 {editMode && (
                   <div
                     className={clsx(
-                      "sticky top-0 z-10 w-full border-2 border-dashed border-theme-500 bg-theme-50 p-2 py-2 px-2 opacity-90 shadow-inner",
+                      "border-theme-500 bg-theme-50 sticky top-0 z-10 w-full border-2 border-dashed p-2 px-2 py-2 opacity-90 shadow-inner",
                       item.banner ? "flex" : "hidden group-hover:flex"
                     )}
                   >
@@ -155,7 +155,7 @@ export default function PageBlocks({ items, editMode, onChange }: { items: PageB
                 )}
                 <div
                   className={clsx(
-                    editMode && "relative rounded-md rounded-t-none border-2 border-t-0 border-b-0 border-dashed border-transparent group-hover:border-gray-800"
+                    editMode && "relative rounded-md rounded-t-none border-2 border-b-0 border-t-0 border-dashed border-transparent group-hover:border-gray-800"
                   )}
                 >
                   {item.banner && <Banner item={item.banner} />}
@@ -213,15 +213,15 @@ function AddBlockButton({ onAdd, className }: { onAdd: (type: string) => void; c
     <div className={className}>
       <div className="relative">
         <div className="absolute inset-0 flex items-center" aria-hidden="true">
-          <div className="w-full border-t border-theme-300 dark:border-theme-800" />
+          <div className="border-theme-300 dark:border-theme-800 w-full border-t" />
         </div>
         <div className="relative flex justify-center">
           <button
             onClick={() => setAdding(true)}
             type="button"
-            className="inline-flex items-center rounded-full border border-theme-300 bg-theme-50 px-4 py-1.5 text-sm font-medium leading-5 text-gray-700 shadow-sm hover:bg-theme-100 focus:outline-none focus:ring-2 focus:ring-theme-500 focus:ring-offset-2 dark:border-theme-800 dark:bg-theme-900"
+            className="border-theme-300 bg-theme-50 hover:bg-theme-100 focus:ring-theme-500 dark:border-theme-800 dark:bg-theme-900 inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium leading-5 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
           >
-            <PlusIcon className="h-5 w-5 text-theme-400 dark:text-theme-600" aria-hidden="true" />
+            <PlusIcon className="text-theme-400 dark:text-theme-600 h-5 w-5" aria-hidden="true" />
           </button>
         </div>
       </div>

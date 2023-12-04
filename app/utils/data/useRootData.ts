@@ -1,14 +1,14 @@
 import { json } from "@remix-run/node";
 import { useMatches } from "@remix-run/react";
 import { MetaTagsDto } from "~/application/dtos/seo/MetaTagsDto";
-import { getSeoMetaTags } from "../services/seoService";
 import { getUserInfo, UserSession } from "../session.server";
+import { remixI18Next } from "~/locale/v2/i18next.server";
 
 export type AppRootData = {
-  title: string;
-  metaTags: MetaTagsDto;
+  metatags: MetaTagsDto;
   userSession: UserSession;
   debug: boolean;
+  locale: string;
 };
 
 export function useRootData(): AppRootData {
@@ -18,11 +18,12 @@ export function useRootData(): AppRootData {
 export async function loadRootData(request: Request) {
   const userInfo = await getUserInfo(request);
 
+  const locale = await remixI18Next.getLocale(request);
   const data: AppRootData = {
-    title: `${process.env.APP_NAME}`,
+    metatags: [{ title: `${process.env.APP_NAME}` }],
     userSession: userInfo,
     debug: process.env.NODE_ENV === "development",
-    metaTags: await getSeoMetaTags(),
+    locale,
   };
 
   return json(data);

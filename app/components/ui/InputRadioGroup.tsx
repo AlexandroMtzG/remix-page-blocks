@@ -34,11 +34,11 @@ export default function InputRadioGroup({ name, title, value, options, setValue,
               className={({ active, checked }) =>
                 clsx(
                   !option.disabled && !disabled ? "cursor-pointer focus:outline-none " : "cursor-not-allowed opacity-25",
-                  active ? "ring-2 ring-accent-500 focus:ring-accent-300" : "",
+                  active ? "ring-accent-500 focus:ring-accent-300 ring-2" : "",
                   checked
-                    ? "border-transparent bg-theme-800 text-white hover:bg-theme-900 hover:text-accent-100"
+                    ? "bg-theme-800 hover:bg-theme-900 hover:text-accent-100 border-transparent text-white"
                     : "border-gray-200 bg-white text-gray-900 hover:bg-gray-50",
-                  "flex items-center justify-center rounded-md border py-2 px-3 text-sm font-medium uppercase sm:flex-1"
+                  "flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium uppercase sm:flex-1"
                 )
               }
               disabled={option.disabled}

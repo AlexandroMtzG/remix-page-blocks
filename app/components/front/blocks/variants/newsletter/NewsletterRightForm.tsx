@@ -1,17 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { Link, useFetcher } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { NewsletterBlockDto } from "~/application/dtos/marketing/NewsletterBlockDto";
+import { useTypedFetcher } from "remix-typedjson";
 
 export default function NewsletterRightForm({ item }: { item: NewsletterBlockDto }) {
   const { t } = useTranslation();
-  const fetcher = useFetcher();
-  const state: "idle" | "success" | "error" | "submitting" = fetcher.submission
-    ? "submitting"
-    : fetcher.data?.subscription
-    ? "success"
-    : fetcher.data?.error
-    ? "error"
-    : "idle";
+  const fetcher = useTypedFetcher<{ success?: string; error?: string }>();
+  const state: "idle" | "success" | "error" | "submitting" =
+    fetcher.state === "submitting" ? "submitting" : fetcher.data?.success ? "success" : fetcher.data?.error ? "error" : "idle";
   return (
     <section className="body-font text-gray-600 dark:text-gray-400">
       <div className="container mx-auto flex flex-wrap items-center px-5 py-24">
@@ -34,7 +30,7 @@ export default function NewsletterRightForm({ item }: { item: NewsletterBlockDto
               id="email"
               name="email"
               required
-              className="w-full rounded border border-gray-300 bg-white bg-opacity-50 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-theme-500 focus:bg-transparent focus:ring-2 focus:ring-theme-200 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:focus:ring-theme-800"
+              className="focus:border-theme-500 focus:ring-theme-200 dark:focus:ring-theme-800 w-full rounded border border-gray-300 bg-white bg-opacity-50 px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:bg-transparent focus:ring-2 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400"
             />
           </div>
           <div className="relative mb-4">
@@ -46,7 +42,7 @@ export default function NewsletterRightForm({ item }: { item: NewsletterBlockDto
               id="first_name"
               name="first_name"
               required
-              className="w-full rounded border border-gray-300 bg-white bg-opacity-50 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-theme-500 focus:bg-transparent focus:ring-2 focus:ring-theme-200 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:focus:ring-theme-800"
+              className="focus:border-theme-500 focus:ring-theme-200 dark:focus:ring-theme-800 w-full rounded border border-gray-300 bg-white bg-opacity-50 px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:bg-transparent focus:ring-2 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400"
             />
           </div>
           <div className="relative mb-4">
@@ -58,7 +54,7 @@ export default function NewsletterRightForm({ item }: { item: NewsletterBlockDto
               id="last_name"
               name="last_name"
               required
-              className="w-full rounded border border-gray-300 bg-white bg-opacity-50 py-1 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-theme-500 focus:bg-transparent focus:ring-2 focus:ring-theme-200 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:focus:ring-theme-800"
+              className="focus:border-theme-500 focus:ring-theme-200 dark:focus:ring-theme-800 w-full rounded border border-gray-300 bg-white bg-opacity-50 px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:bg-transparent focus:ring-2 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400"
             />
           </div>
           <button type="submit" className="btn-primary btn">

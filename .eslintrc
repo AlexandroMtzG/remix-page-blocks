@@ -1,0 +1,12 @@
+{
+  "extends": ["@remix-run/eslint-config"],
+  "rules": {
+    "no-console": "warn",
+    "import/first": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "prefer-const": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-var": "off",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
+}

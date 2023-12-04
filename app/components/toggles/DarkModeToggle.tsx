@@ -28,10 +28,10 @@ export default function DarkModeToggle({ className }: { className: string }) {
           />
         </svg>
       </span>
-      <div className="relative rounded-full focus:outline-none focus:ring-2 focus:ring-theme-500 focus:ring-offset-2">
+      <div className="focus:ring-theme-500 relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2">
         <div className="h-3.5 w-6 rounded-full bg-gray-500 shadow-md outline-none transition"></div>
         <div
-          className={`absolute top-1 left-1 inline-flex h-1.5 w-1.5 transform items-center justify-center rounded-full bg-white shadow-sm transition-all duration-200 ease-in-out
+          className={`absolute left-1 top-1 inline-flex h-1.5 w-1.5 transform items-center justify-center rounded-full bg-white shadow-sm transition-all duration-200 ease-in-out
                   ${isDarkMode ? "translate-x-3" : ""}`}
         ></div>
       </div>

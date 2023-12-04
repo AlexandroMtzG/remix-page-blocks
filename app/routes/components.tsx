@@ -1,9 +1,7 @@
 import Footer from "~/components/front/Footer";
 import Header from "~/components/front/Header";
 import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { i18nHelper } from "~/locale/i18n.utils";
 import ServerError from "~/components/ui/ServerError";
-import { Language } from "remix-i18next";
 import WarningBanner from "~/components/ui/WarningBanner";
 import ButtonPrimary from "~/components/ui/ButtonPrimary";
 import ButtonSecondary from "~/components/ui/ButtonSecondary";
@@ -28,20 +26,15 @@ import OpenModal from "~/components/ui/OpenModal";
 
 type LoaderData = {
   title: string;
-  i18n: Record<string, Language>;
 };
-export let loader: LoaderFunction = async ({ request }) => {
-  let { translations } = await i18nHelper(request);
+export const loader: LoaderFunction = async ({ request }) => {
   const data: LoaderData = {
     title: `Components`,
-    i18n: translations,
   };
   return json(data);
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  title: data?.title,
-});
+export const meta: MetaFunction<typeof loader> = ({ data }) => [{ title: data?.title }];
 
 export default function Components() {
   const [success, setSuccess] = useState<{ title: string; description: string; closeText: string }>();
@@ -207,8 +200,8 @@ export default function Components() {
   );
 }
 
-export function ErrorBoundary({ error }: { error: Error }) {
-  return <ServerError error={error} />;
+export function ErrorBoundary() {
+  return <ServerError />;
 }
 
 function UiLibrary({ library, title, href }: { library: string; title: string; href: string }) {
@@ -219,7 +212,7 @@ function UiLibrary({ library, title, href }: { library: string; title: string; h
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center space-x-2 border-b border-dashed border-theme-500 font-bold hover:border-dotted"
+        className="border-theme-500 flex items-center space-x-2 border-b border-dashed font-bold hover:border-dotted"
       >
         <div>{library}</div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">

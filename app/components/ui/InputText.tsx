@@ -129,10 +129,10 @@ const InputText = (
             </div>
           </div>
           {withTranslation && value?.includes(".") && (
-            <div className="truncate font-light italic text-slate-600" title={t(value, translationParams ?? [])}>
+            <div className="truncate font-light italic text-slate-600" title={t(value, { 0: translationParams })}>
               {t("admin.pricing.i18n")}:{" "}
               {getTranslation(value) ? (
-                <span className="text-slate-600">{t(value, translationParams ?? [])}</span>
+                <span className="text-slate-600">{t(value, { 0: translationParams })}</span>
               ) : (
                 <span className="text-red-600">{t("shared.invalid")}</span>
               )}
@@ -148,7 +148,7 @@ const InputText = (
             <Editor
               theme={editorTheme}
               className={clsx(
-                "block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500 sm:text-sm",
+                "focus:border-accent-500 focus:ring-accent-500 block w-full min-w-0 flex-1 rounded-md border-gray-300 sm:text-sm",
                 editorSize === "sm" && "h-32",
                 editorSize === "md" && "h-64",
                 editorSize === "lg" && "h-96",
@@ -211,7 +211,7 @@ const InputText = (
             readOnly={readOnly}
             placeholder={placeholder}
             className={clsx(
-              "block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-accent-500 focus:ring-accent-500 sm:text-sm",
+              "focus:border-accent-500 focus:ring-accent-500 block w-full min-w-0 flex-1 rounded-md border-gray-300 sm:text-sm",
               className,
               classNameBg,
               disabled || readOnly ? "cursor-not-allowed bg-gray-100" : "hover:bg-gray-50 focus:bg-gray-50",

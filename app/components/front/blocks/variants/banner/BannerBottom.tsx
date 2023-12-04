@@ -13,7 +13,7 @@ export default function BannerBottom({ item, absolute = true }: { item: BannerBl
     <>
       {item && open && (
         <div
-          className={clsx("alert bottom-0 z-10 mx-auto w-full rounded-none border-t-2 border-theme-500 bg-gray-900 text-white shadow-lg", absolute && "fixed")}
+          className={clsx("alert border-theme-500 bottom-0 z-10 mx-auto w-full rounded-none border-t-2 bg-gray-900 text-white shadow-lg", absolute && "fixed")}
         >
           <div>
             <MegaphoneIcon className="current h-6 w-6 flex-shrink-0" />

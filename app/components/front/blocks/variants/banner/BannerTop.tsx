@@ -12,7 +12,7 @@ export default function BannerTop({ item }: { item: BannerBlockDto }) {
   return (
     <>
       {item && open && (
-        <div className="alert mx-auto rounded-none border-b-2 border-theme-500 bg-gray-900 text-white shadow-lg">
+        <div className="alert border-theme-500 mx-auto rounded-none border-b-2 bg-gray-900 text-white shadow-lg">
           <div>
             <MegaphoneIcon className="current h-6 w-6 flex-shrink-0" />
             <div className={clsx("flex flex-grow", item.cta ? "justify-start" : "justify-center")}>

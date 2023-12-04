@@ -1,4 +1,4 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "i18next";
 import { FooterBlockDto, FooterBlockStyle } from "~/application/dtos/marketing/FooterBlockDto";
 
 export function defaultFooter({ t }: { t: TFunction }): FooterBlockDto {

@@ -1,4 +1,4 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "i18next";
 import { PageBlockDto } from "~/application/dtos/marketing/PageBlockDto";
 import { getGitHubSocialProof } from "~/utils/integrations/githubService";
 import { i18nHelper } from "~/locale/i18n.utils";

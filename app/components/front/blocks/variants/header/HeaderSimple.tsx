@@ -27,7 +27,7 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
             </Button>
             <Dropdown.Menu
               tabIndex={0}
-              className="menu-compact z-10 mt-3 w-52 rounded-lg border border-gray-200 bg-base-100 p-2 dark:border-gray-700 dark:bg-gray-900"
+              className="menu-compact bg-base-100 z-10 mt-3 w-52 rounded-lg border border-gray-200 p-2 dark:border-gray-700 dark:bg-gray-900"
             >
               {item.links.map((item, idx) => {
                 return (
@@ -52,7 +52,7 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
                             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                           </svg>
                         </div>
-                        <ul className="z-10 rounded-lg border border-gray-200 bg-base-100 p-2 dark:border-gray-700 dark:bg-gray-900">
+                        <ul className="bg-base-100 z-10 rounded-lg border border-gray-200 p-2 dark:border-gray-700 dark:bg-gray-900">
                           {item.items.map((item, idx) => {
                             return (
                               <li key={idx}>
@@ -120,7 +120,7 @@ export default function HeaderSimple({ item }: { item: HeaderBlockDto }) {
                           <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                         </svg>
                       </div>
-                      <Menu className="z-10 rounded-lg border border-gray-200 bg-base-100 p-2 dark:border-gray-700 dark:bg-gray-900">
+                      <Menu className="bg-base-100 z-10 rounded-lg border border-gray-200 p-2 dark:border-gray-700 dark:bg-gray-900">
                         {item.items.map((subItem, idx) => {
                           return (
                             <Menu.Item

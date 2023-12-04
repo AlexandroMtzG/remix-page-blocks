@@ -1,4 +1,4 @@
-import { TFunction } from "react-i18next";
+import { TFunction } from "i18next";
 import { BannerBlockStyle } from "~/application/dtos/marketing/BannerBlockDto";
 import { CommunityBlockStyle } from "~/application/dtos/marketing/CommunityBlockDto";
 import { FaqBlockStyle } from "~/application/dtos/marketing/FaqBlockDto";
@@ -37,7 +37,7 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
       banner: {
         style: defaultStyles.banner,
         text: t("blocks.banner.text"),
-        cta: [{ text: t("blocks.banner.cta.learnMore"), href: "https://saasrock.com/?ref=remix-page-blocks-banner" }],
+        cta: [{ text: t("blocks.banner.cta.learnMore"), href: "https://saasrock.com/?ref=remix-page-blocks-banner-v2", target: "_blank" }],
       },
     },
     // Header
@@ -158,7 +158,9 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
     {
       video: {
         style: defaultStyles.video,
-        src: "https://www.loom.com/embed/443b9ffaaef2497fa1f94a51579e96f8",
+        headline: "Remix v2 migration",
+        subheadline: "Watch how faster Remix v2 is compared to v1.",
+        src: "https://www.loom.com/embed/e9d9c80da0494136a8ddf16987bd884d",
       },
     },
     // Community

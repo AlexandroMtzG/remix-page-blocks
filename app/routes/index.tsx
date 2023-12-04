@@ -1,6 +1,5 @@
 import { i18nHelper } from "~/locale/i18n.utils";
 import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { Language } from "remix-i18next";
 import { useState } from "react";
 import { getSeoMetaTags } from "~/utils/services/seoService";
 import { MetaTagsDto } from "~/application/dtos/seo/MetaTagsDto";
@@ -12,34 +11,24 @@ import { getUserInfo, UserSession } from "~/utils/session.server";
 import PageBlockEditMode from "~/components/front/blocks/PageBlockEditMode";
 
 type LoaderData = {
-  i18n: Record<string, Language>;
   userSession: UserSession;
-  metaTags: MetaTagsDto;
+  metatags: MetaTagsDto;
   page: PageConfiguration;
 };
 
-export let loader: LoaderFunction = async ({ request }) => {
-  const { t, translations } = await i18nHelper(request);
-  try {
-    const page = await getPageConfiguration({ request, t });
-    const userSession = await getUserInfo(request);
-    const data: LoaderData = {
-      i18n: translations,
-      userSession,
-      metaTags: await getSeoMetaTags(request),
-      page,
-    };
-    return json(data);
-  } catch (e) {
-    return json({
-      i18n: translations,
-    });
-  }
+export const loader: LoaderFunction = async ({ request }) => {
+  const { t } = await i18nHelper(request);
+  const page = await getPageConfiguration({ request, t });
+  const userSession = await getUserInfo(request);
+  const data: LoaderData = {
+    userSession,
+    metatags: await getSeoMetaTags(request),
+    page,
+  };
+  return json(data);
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  ...data?.metaTags,
-});
+export const meta: MetaFunction<typeof loader> = ({ data }) => data?.metatags ?? [];
 
 export default function IndexRoute() {
   const data = useLoaderData<LoaderData>();

@@ -4,7 +4,10 @@ const colors = require("tailwindcss/colors");
 
 const themeColor = colors.indigo;
 const accentColor = colors.gray;
-module.exports = {
+/**
+ * @type {import('tailwindcss').Config}
+ */
+export default {
   content: ["./app/**/*.{js,ts,jsx,tsx}", "node_modules/daisyui/dist/**/*.js", "node_modules/react-daisyui/dist/**/*.js"],
   darkMode: "class",
   theme: {
@@ -61,13 +64,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-    require("daisyui"),
-  ],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography"), require("@tailwindcss/aspect-ratio"), require("daisyui")],
   daisyui: {
     themes: [
       {

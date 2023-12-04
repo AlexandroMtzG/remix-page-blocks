@@ -20,6 +20,7 @@ node_modules
 prisma/dev.db
 .env
 .env.production
+.env.fly.production
 
 .idea
 api/index.js.map

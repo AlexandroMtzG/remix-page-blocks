@@ -48,7 +48,7 @@
     "hero": {
       "headline": "Bloques de Páginas Remix",
       "subheadline": "Una colección de bloques funcionales: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, y más.",
-      "topText": "Remix 1.6.3 - Tailwind CSS 3.1.2 - DaisyUI 2.4.6",
+      "topText": "Remix 2.3.1 ✨ Tailwind CSS 3.3.5 💅 DaisyUI 2.42.1",
       "cta": {
         "primary": "Ver en Github",
         "secondary": "Hecho por SaasRock"
@@ -134,7 +134,7 @@
     "subheadline": "Suscríbete al newsletter para recibir actualizaciones",
     "subscribe": "Suscribirse",
     "subscribing": "Suscribiendo",
-    "subscribed": "¡Gracias por suscribirte!",
+    "subscribed": "¡Gracias por suscribirte! Revisa tu correo para confirmar (incluyendo la carpeta de SPAM).",
     "weCare": "Nos importa la protección de tu privacidad.",
     "form": {
       "firstName": "Nombre",

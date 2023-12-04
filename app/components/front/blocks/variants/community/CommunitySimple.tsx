@@ -7,13 +7,13 @@ export default function CommunitySimple({ item }: { item: CommunityBlockDto }) {
   const { t } = useTranslation();
   return (
     <div>
-      <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-8 sm:space-y-12">
           <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">{t(item.headline)}</h2>
             <p className="text-xl text-gray-500">{t(item.subheadline)}</p>
             {item.cta && (
-              <div className="flex flex-col justify-center space-y-1 sm:flex-row sm:space-y-0 sm:space-x-2">
+              <div className="flex flex-col justify-center space-y-1 sm:flex-row sm:space-x-2 sm:space-y-0">
                 {item.cta.map((item) => {
                   return (
                     <div key={item.href} className="rounded-md ">
@@ -23,7 +23,7 @@ export default function CommunitySimple({ item }: { item: CommunityBlockDto }) {
                           target="_blank"
                           rel="noreferrer"
                           className={clsx(
-                            "group flex w-full items-center justify-center space-x-2 truncate rounded-md border px-8 py-3 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 md:py-2 md:px-4"
+                            "group flex w-full items-center justify-center space-x-2 truncate rounded-md border px-8 py-3 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 md:px-4 md:py-2"
                           )}
                         >
                           {t(item.text)}
@@ -32,7 +32,7 @@ export default function CommunitySimple({ item }: { item: CommunityBlockDto }) {
                         <Link
                           to={item.href}
                           className={clsx(
-                            "group flex w-full items-center justify-center space-x-2 truncate rounded-md border px-8 py-3 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 md:py-2 md:px-4"
+                            "group flex w-full items-center justify-center space-x-2 truncate rounded-md border px-8 py-3 text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-900 md:px-4 md:py-2"
                           )}
                         >
                           {t(item.text)}

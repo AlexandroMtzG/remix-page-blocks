@@ -1,32 +1,33 @@
-import { ActionFunction, LinksFunction, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useCatch, useLoaderData } from "@remix-run/react";
+import { ActionFunction, LinksFunction, LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from "@remix-run/react";
 import styles from "./styles/app.css";
-import { useSetupTranslations } from "remix-i18next";
+import { useChangeLanguage } from "remix-i18next";
 import { createUserSession, getUserInfo } from "./utils/session.server";
 import { loadRootData, useRootData } from "./utils/data/useRootData";
 import clsx from "clsx";
-import Page404 from "./components/pages/Page404";
 import FloatingLoader from "./components/transitions/FloatingLoader";
+import ServerError from "./components/ui/ServerError";
+import { useTranslation } from "react-i18next";
 
 export let links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
-export let loader: LoaderFunction = async ({ request }) => {
+export const handle = { i18n: "translations" };
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   return loadRootData(request);
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  ...data?.metaTags,
-});
+export const meta: MetaFunction<typeof loader> = ({ data }) => data?.metatags ?? [];
 
-function Document({ children }: { children: React.ReactNode; title?: string }) {
+function Document({ children, lang = "en", dir = "ltr" }: { children: React.ReactNode; lang?: string; dir?: string }) {
   const rootData = useRootData();
 
   return (
     <html
+      lang={lang}
+      dir={dir}
       key={rootData.userSession?.lng}
-      lang={rootData.userSession?.lng}
       className={clsx(rootData.userSession?.lightOrDarkMode === "dark" ? "dark bg-gray-900" : "", " bg-white")}
     >
       <head>
@@ -90,55 +91,21 @@ export const action: ActionFunction = async ({ request }) => {
 };
 
 export default function App() {
-  let { lng } = useLoaderData<{ lng: string }>();
-  useSetupTranslations(lng ?? "en");
+  const { locale } = useLoaderData<typeof loader>();
+  const { i18n } = useTranslation();
+  useChangeLanguage(locale);
   return (
-    <Document>
+    <Document lang={locale} dir={i18n.dir()}>
       <Outlet />
     </Document>
   );
 }
 
-export function CatchBoundary() {
-  const caught = useCatch();
+export function ErrorBoundary() {
   return (
-    <Document title={`${caught.status} ${caught.statusText}`}>
-      <div>
-        <h1>
-          {caught.status === 404 ? (
-            <Page404 />
-          ) : (
-            <div className="mx-auto p-12 text-center">
-              {caught.status} {caught.statusText}
-            </div>
-          )}
-        </h1>
-      </div>
-    </Document>
-  );
-}
-
-export function ErrorBoundary({ error }: { error: Error }) {
-  const data = useRootData();
-  return (
-    <Document title="Unexpected error">
+    <Document>
       <div className="mx-auto p-12 text-center">
-        <h1>
-          Server error,{" "}
-          <button type="button" onClick={() => window.location.reload()} className="underline">
-            please try again
-          </button>
-          {data.debug && (
-            <div className="flex flex-col space-y-1 text-left">
-              <div>
-                <span className="font-bold">Message:</span> {error.message}
-              </div>
-              <div>
-                <span className="font-bold">Stack:</span> {error.stack}
-              </div>
-            </div>
-          )}
-        </h1>
+        <ServerError />
       </div>
     </Document>
   );

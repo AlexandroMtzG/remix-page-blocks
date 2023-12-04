@@ -4,28 +4,23 @@ import { json, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { useTranslation } from "react-i18next";
 import { i18nHelper } from "~/locale/i18n.utils";
 import ServerError from "~/components/ui/ServerError";
-import { Language } from "remix-i18next";
 import { useLoaderData } from "@remix-run/react";
 import WarningBanner from "~/components/ui/WarningBanner";
 
 type LoaderData = {
   title: string;
-  i18n: Record<string, Language>;
   formUrl: string;
 };
-export let loader: LoaderFunction = async ({ request }) => {
-  let { t, translations } = await i18nHelper(request);
+export const loader: LoaderFunction = async ({ request }) => {
+  let { t } = await i18nHelper(request);
   const data: LoaderData = {
     title: `${t("contact.headline")} | ${process.env.APP_NAME}`,
-    i18n: translations,
     formUrl: process.env.CONTACT_FORMSPREE?.toString() ?? "",
   };
   return json(data);
 };
 
-export const meta: MetaFunction = ({ data }) => ({
-  title: data?.title,
-});
+export const meta: MetaFunction<typeof loader> = ({ data }) => [{ title: data?.title }];
 
 export default function ContactRoute() {
   const { t } = useTranslation();
@@ -162,6 +157,6 @@ export default function ContactRoute() {
   );
 }
 
-export function ErrorBoundary({ error }: { error: Error }) {
-  return <ServerError error={error} />;
+export function ErrorBoundary() {
+  return <ServerError />;
 }
