@@ -36,7 +36,7 @@ export default function IndexRoute() {
   const [searchParams] = useSearchParams();
 
   function isEditMode() {
-    return searchParams.get("editMode") !== "false";
+    return searchParams.get("editMode") === "true";
   }
 
   return (

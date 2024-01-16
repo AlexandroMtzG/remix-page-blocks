@@ -21,7 +21,7 @@ const defaultStyles = {
   footer: FooterBlockStyle.columns,
   hero: HeroBlockStyle.simple,
   gallery: GalleryBlockStyle.carousel,
-  logoClouds: LogoCloudsBlockStyle.simple,
+  logoClouds: LogoCloudsBlockStyle.custom,
   video: VideoBlockStyle.simple,
   community: CommunityBlockStyle.simple,
   testimonials: TestimonialsBlockStyle.simple,
@@ -81,25 +81,6 @@ export function defaultLandingPage({ t }: { t: TFunction }) {
       logoClouds: {
         style: defaultStyles.logoClouds,
         headline: t("blocks.logoClouds.headline"),
-        logos: [
-          {
-            alt: "Remix",
-            href: "https://remix.run/ref=saasrock.com",
-            src: "https://saasrock.com/build/_assets/remix-4ESNCVZ5.png",
-            srcDark: "https://saasrock.com/build/_assets/remix-dark-U2ASPSOI.png",
-          },
-          {
-            alt: "Tailwind CSS",
-            href: "https://tailwindcss.com/ref=saasrock.com",
-            src: "https://saasrock.com/build/_assets/tailwindcss-G3OQBAVI.png",
-          },
-          {
-            alt: "Prisma",
-            href: "https://prisma.io/ref=saasrock.com",
-            src: "https://saasrock.com/build/_assets/prisma-ATY77GXX.png",
-            srcDark: "https://saasrock.com/build/_assets/prisma-dark-3FBYDJ4J.png",
-          },
-        ],
       },
     },
     // Gallery

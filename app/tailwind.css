@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  text-transform: none;
-}
-
 @layer utilities {
+  .btn {
+    text-transform: none;
+  }
+
   .tooltip {
     @apply invisible absolute;
   }
