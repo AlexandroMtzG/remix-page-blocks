@@ -19,10 +19,10 @@
   },
   "blocks": {
     "header": {
-      "product": "Product",
+      "about": "About",
+      "community-guidelines": "Community Guidelines",
       "contact": "Contact",
-      "newsletter": "Newsletter",
-      "more": "More like this"
+      "events": "Events"
     },
     "footer": {
       "text": "A collection of functional blocks: Header, Footer, Hero, Banner, Features, Logo Clouds, Community, Embeded Video, Testimonials, FAQ, Contact, Newsletter, and more.",
