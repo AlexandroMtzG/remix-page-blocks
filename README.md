@@ -1,6 +1,6 @@
 # Remix Page Blocks
 
-Remix and Tailwind CSS simple page block editor. Built by [saasrock](https://saasrock.com/).
+Remix and Tailwind CSS simple page block editor. Built by https://saasrock.com.
 
 ## Latest Updates
 
